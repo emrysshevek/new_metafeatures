@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_55_hepatitis_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 0.1,
+      "fit_intercept": true,
+      "l1_ratio": 0.6000000000000001,
+      "loss": "hinge",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "AGE,SEX,STEROID,ANTIVIRALS,FATIGUE,MALAISE,ANOREXIA,LIVER_BIG,LIVER_FIRM,SPLEEN_PALPABLE,SPIDERS,ASCITES,VARICES,BILIRUBIN,ALK_PHOSPHATE,SGOT,ALBUMIN,PROTIME,HISTOLOGY": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": false,
+        "categorize": false,
+        "normalize_text": true,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "80dfb856e5da11e7b5590002c95916b4"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 99,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.7996794871794872,
+    "metric": "f1Macro"
+  }
+}

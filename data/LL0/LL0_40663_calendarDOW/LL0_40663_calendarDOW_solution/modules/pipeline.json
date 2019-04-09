@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_40663_calendarDOW_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 0.001,
+      "fit_intercept": true,
+      "l1_ratio": 0.2,
+      "loss": "squared_hinge",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "Feature00,Feature01,Feature02,Feature03,Feature04,Feature05,Feature06,Feature07,Feature08,Feature09,Feature10,Feature11,Feature12,Feature13,Feature14,Feature15,Feature16,Feature17,Feature18,Feature19,Feature20,Feature21,Feature22,Feature23,Feature24,Feature25,Feature26,Feature27,Feature28,Feature29,Feature30,Feature31": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": true,
+        "normalize_text": false,
+        "numeric_strategy": "median"
+      },
+      "uuid": "80fc41e2e5da11e7a1a60002c958a3e6"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC",
+    "params": {
+      "C": 0.011768119524349984,
+      "threshold": 1e-05
+    }
+  },
+  "performance": {
+    "cv_performance": 0.6243566527470927,
+    "metric": "f1Macro"
+  }
+}

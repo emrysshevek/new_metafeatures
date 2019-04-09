@@ -1,0 +1,117 @@
+{
+  "about": {
+    "datasetID": "LL0_223_stock_dataset",
+    "datasetName": "LL0_223_stock",
+    "description": "**Author**:   \n**Source**: Unknown -   \n**Please cite**:   \n\nThis is a dataset obtained from the StatLib repository. Here is the included description:\n\n The data provided are daily stock prices from January 1988 through October 1991, for ten aerospace companies.\n\n Source: collection of regression datasets by Luis Torgo (ltorgo@ncc.up.pt) at\n http://www.ncc.up.pt/~ltorgo/Regression/DataSets.html\n Original source: StatLib repository. \n Characteristics: 950 cases, 10 continuous attributes",
+    "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+    "license": "CC-BY license",
+    "source": "OpenML",
+    "sourceURI": "http://www.openml.org/d/223",
+    "approximateSize": "",
+    "datasetSchemaVersion": "3.2.0",
+    "redacted": false,
+    "datasetVersion": "2.0",
+    "digest": "a5f4f614678fd92fbef2d86a13dfb72f196efd0e243ec837f1885833e37b4185"
+  },
+  "dataResources": [
+    {
+      "resID": "learningData",
+      "resPath": "tables/learningData.csv",
+      "resType": "table",
+      "resFormat": [
+        "text/csv"
+      ],
+      "isCollection": false,
+      "columns": [
+        {
+          "colIndex": 0,
+          "colName": "d3mIndex",
+          "colType": "integer",
+          "role": [
+            "index"
+          ]
+        },
+        {
+          "colIndex": 1,
+          "colName": "company1",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 2,
+          "colName": "company2",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 3,
+          "colName": "company3",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 4,
+          "colName": "company4",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 5,
+          "colName": "company5",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 6,
+          "colName": "company6",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 7,
+          "colName": "company7",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 8,
+          "colName": "company8",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 9,
+          "colName": "company9",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 10,
+          "colName": "company10",
+          "colType": "real",
+          "role": [
+            "suggestedTarget"
+          ]
+        }
+      ]
+    }
+  ]
+}

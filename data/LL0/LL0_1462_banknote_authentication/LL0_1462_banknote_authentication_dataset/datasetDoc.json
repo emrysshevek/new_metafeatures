@@ -1,0 +1,77 @@
+{
+  "about": {
+    "datasetID": "LL0_1462_banknote_authentication_dataset",
+    "datasetName": "LL0_1462_banknote_authentication",
+    "description": "Author: Volker Lohweg (University of Applied Sciences, Ostwestfalen-Lippe)  \nSource: [UCI](https://archive.ics.uci.edu/ml/datasets/banknote+authentication) - 2012  \nPlease cite: [UCI](https://archive.ics.uci.edu/ml/citation_policy.html) \n\nDataset about distinguishing genuine and forged banknotes. Data were extracted from images that were taken from genuine and forged banknote-like specimens. For digitization, an industrial camera usually used for print inspection was used. The final images have 400x 400 pixels. Due to the object lens and distance to the investigated object gray-scale pictures with a resolution of about 660 dpi were gained. A Wavelet Transform tool was used to extract features from these images.\n\n### Attribute Information  \n\nV1. variance of Wavelet Transformed image (continuous)  \nV2. skewness of Wavelet Transformed image (continuous)  \nV3. curtosis of Wavelet Transformed image (continuous)  \nV4. entropy of image (continuous)  \n\nClass (target). Presumably 1 for genuine and 2 for forged",
+    "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+    "license": "CC-BY license",
+    "source": "OpenML",
+    "sourceURI": "http://www.openml.org/d/1462",
+    "approximateSize": "",
+    "datasetSchemaVersion": "3.2.0",
+    "redacted": false,
+    "datasetVersion": "2.0",
+    "digest": "730ad178c6185acab5247dae20b9db563872233183682a12bfda487ede330291"
+  },
+  "dataResources": [
+    {
+      "resID": "learningData",
+      "resPath": "tables/learningData.csv",
+      "resType": "table",
+      "resFormat": [
+        "text/csv"
+      ],
+      "isCollection": false,
+      "columns": [
+        {
+          "colIndex": 0,
+          "colName": "d3mIndex",
+          "colType": "integer",
+          "role": [
+            "index"
+          ]
+        },
+        {
+          "colIndex": 1,
+          "colName": "V1",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 2,
+          "colName": "V2",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 3,
+          "colName": "V3",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 4,
+          "colName": "V4",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 5,
+          "colName": "Class",
+          "colType": "categorical",
+          "role": [
+            "suggestedTarget"
+          ]
+        }
+      ]
+    }
+  ]
+}

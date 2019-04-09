@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_690_visualizing_galaxy",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator", 
+    "params": {
+      "alpha": 0.001, 
+      "epsilon": 0.03162277660168379, 
+      "eta0": 0.01, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.7000000000000001, 
+      "learning_rate": "optimal", 
+      "loss": "squared_loss", 
+      "penalty": "elasticnet", 
+      "power_t": 0.5
+    }
+  }, 
+  "feature_extractors": {
+    "eastwest,northsouth,angle,radialposition": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": false, 
+        "categorize": true, 
+        "normalize_text": false, 
+        "numeric_strategy": "mean"
+      }, 
+      "uuid": "9f8eb652e0f911e7a3a15cb901924b28"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectPercentileRegression", 
+    "params": {
+      "percentile": 60, 
+      "score_func": "f_regression"
+    }
+  }, 
+  "performance": {
+    "cv_performance": 895.6433323399336, 
+    "metric": "meanSquaredError"
+  }
+}

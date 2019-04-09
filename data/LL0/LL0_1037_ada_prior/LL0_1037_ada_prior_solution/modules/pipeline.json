@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_1037_ada_prior_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 0.001,
+      "fit_intercept": true,
+      "l1_ratio": 0.1,
+      "loss": "log",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "age,workclass,fnlwgt,education,educationNum,maritalStatus,occupation,relationship,race,sex,capitalGain,capitalLoss,hoursPerWeek,nativeCountry": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": false,
+        "normalize_text": true,
+        "numeric_strategy": "median"
+      },
+      "uuid": "692014f0e66a11e7aca50002c95916b4"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 93,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.7810430628366221,
+    "metric": "f1Macro"
+  }
+}

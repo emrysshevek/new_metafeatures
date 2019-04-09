@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_1044_eye_movements",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator", 
+    "params": {
+      "alpha": 0.001, 
+      "fit_intercept": false, 
+      "l1_ratio": 0.30000000000000004, 
+      "loss": "log", 
+      "penalty": "elasticnet"
+    }
+  }, 
+  "feature_extractors": {
+    "lineNo,assgNo,fixcount,firstPassCnt,P1stFixation,P2stFixation,prevFixDur,firstfixDur,firstPassFixDur,nextFixDur,firstSaccLen,lastSaccLen,prevFixPos,landingPos,leavingPos,totalFixDur,meanFixDur,nRegressFrom,regressLen,nextWordRegress,regressDur,pupilDiamMax,pupilDiamLag,timePrtctg,nWordsInTitle,titleNo,wordNo": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": true, 
+        "categorize": true, 
+        "normalize_text": false, 
+        "numeric_strategy": "median"
+      }, 
+      "uuid": "b62e5258db3811e7aa1f0002c958a402"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC", 
+    "params": {
+      "C": 40.37017258596554, 
+      "threshold": 1e-05
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.5523907566076166, 
+    "metric": "f1Macro"
+  }
+}

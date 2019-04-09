@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_1498_sa_heart",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator", 
+    "params": {
+      "alpha": 0.0001, 
+      "fit_intercept": true, 
+      "l1_ratio": 1.0, 
+      "loss": "squared_hinge", 
+      "penalty": "elasticnet"
+    }
+  }, 
+  "feature_extractors": {
+    "V1,V2,V3,V4,V5,V6,V7,V8,V9": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": true, 
+        "categorize": false, 
+        "normalize_text": false, 
+        "numeric_strategy": "median"
+      }, 
+      "uuid": "35607ea2e04d11e78c1d5cb9018c8fa0"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC", 
+    "params": {
+      "C": 52140.082879996844, 
+      "threshold": 1e-05
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.6931096681096681, 
+    "metric": "f1Macro"
+  }
+}

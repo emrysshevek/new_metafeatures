@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_524_pbc",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator", 
+    "params": {
+      "alpha": 0.001, 
+      "epsilon": 0.31622776601683794, 
+      "eta0": 0.01, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.9, 
+      "learning_rate": "invscaling", 
+      "loss": "squared_loss", 
+      "penalty": "elasticnet", 
+      "power_t": 0.0
+    }
+  }, 
+  "feature_extractors": {
+    "case_number,number_of_days,drug,age,sex,presence_of_asictes,presence_of_hepatomegaly,presence_of_spiders,presence_of_edema,serum_bilirubin,serum_cholesterol,albumin,urine_copper,alkaline_phosphatase,SGOT,triglicerides,platelets,prothrombin_time,histologic_stage_of_disease": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": true, 
+        "categorize": true, 
+        "normalize_text": true, 
+        "numeric_strategy": "mean"
+      }, 
+      "uuid": "f56c5350daef11e798360002c95915dc"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectPercentileRegression", 
+    "params": {
+      "percentile": 90, 
+      "score_func": "f_regression"
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.4368739500909279, 
+    "metric": "meanSquaredError"
+  }
+}

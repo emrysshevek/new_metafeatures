@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_335_monks_problems_3",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator", 
+    "params": {
+      "alpha": 1e-05, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.1, 
+      "loss": "hinge", 
+      "penalty": "elasticnet"
+    }
+  }, 
+  "feature_extractors": {
+    "attr1,attr2,attr3,attr4,attr5,attr6": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": false, 
+        "categorize": true, 
+        "normalize_text": false, 
+        "numeric_strategy": "mean"
+      }, 
+      "uuid": "e5f0b6c6e07311e7bb685cb9018cd654"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification", 
+    "params": {
+      "percentile": 97, 
+      "score_func": "f_classif"
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.9864532270203201, 
+    "metric": "f1Macro"
+  }
+}

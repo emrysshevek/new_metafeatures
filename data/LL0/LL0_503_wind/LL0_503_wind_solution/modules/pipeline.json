@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_503_wind",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator", 
+    "params": {
+      "alpha": 0.001, 
+      "epsilon": 0.31622776601683794, 
+      "eta0": 0.01, 
+      "fit_intercept": true, 
+      "l1_ratio": 1.0, 
+      "learning_rate": "invscaling", 
+      "loss": "squared_loss", 
+      "penalty": "elasticnet", 
+      "power_t": 0.25
+    }
+  }, 
+  "feature_extractors": {
+    "year,month,day,RPT,VAL,ROS,KIL,SHA,BIR,DUB,CLA,MUL,CLO,BEL": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": false, 
+        "categorize": true, 
+        "normalize_text": false, 
+        "numeric_strategy": "mean"
+      }, 
+      "uuid": "ea1b04d0db3311e7b4e80002c958a42c"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectPercentileRegression", 
+    "params": {
+      "percentile": 100, 
+      "score_func": "f_regression"
+    }
+  }, 
+  "performance": {
+    "cv_performance": 9.742891425708615, 
+    "metric": "meanSquaredError"
+  }
+}

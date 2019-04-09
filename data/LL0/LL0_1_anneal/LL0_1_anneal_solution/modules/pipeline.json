@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_1_anneal",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator", 
+    "params": {
+      "alpha": 0.001, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.2, 
+      "loss": "perceptron", 
+      "penalty": "elasticnet"
+    }
+  }, 
+  "feature_extractors": {
+    "family,product-type,steel,carbon,hardness,temper_rolling,condition,formability,strength,non-ageing,surface-finish,surface-quality,enamelability,bc,bf,bt,bw%2Fme,bl,m,chrom,phos,cbond,marvi,exptl,ferro,corr,blue%2Fbright%2Fvarn%2Fclean,lustre,jurofm,s,p,shape,thick,width,len,oil,bore,packing": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": true, 
+        "categorize": true, 
+        "normalize_text": false, 
+        "numeric_strategy": "median"
+      }, 
+      "uuid": "75c01836e02a11e782bd5cb9018cd6d8"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification", 
+    "params": {
+      "percentile": 74, 
+      "score_func": "f_classif"
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.9801799977429088, 
+    "metric": "f1Macro"
+  }
+}

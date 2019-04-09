@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_464_prnn_synth_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 1e-07,
+      "fit_intercept": true,
+      "l1_ratio": 0.5,
+      "loss": "perceptron",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "xs,ys": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": false,
+        "normalize_text": true,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "698491e6e66a11e7936b0002c958a2da"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 85,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.8457558729608635,
+    "metric": "f1Macro"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "about": {
+    "datasetID": "LL0_50_tic_tac_toe_dataset",
+    "datasetName": "tic_tac_toe",
+    "description": "**Author**: David W. Aha    \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Tic-Tac-Toe+Endgame) - 1991   \n**Please cite**: [UCI](http://archive.ics.uci.edu/ml/citation_policy.html)\n\n**Tic-Tac-Toe Endgame database**  \nThis database encodes the complete set of possible board configurations at the end of tic-tac-toe games, where \"x\" is assumed to have played first.  The target concept is \"win for x\" (i.e., true when \"x\" has one of 8 possible ways to create a \"three-in-a-row\").  \n\n### Attribute Information  \n\n     (x=player x has taken, o=player o has taken, b=blank)\n     1. top-left-square: {x,o,b}\n     2. top-middle-square: {x,o,b}\n     3. top-right-square: {x,o,b}\n     4. middle-left-square: {x,o,b}\n     5. middle-middle-square: {x,o,b}\n     6. middle-right-square: {x,o,b}\n     7. bottom-left-square: {x,o,b}\n     8. bottom-middle-square: {x,o,b}\n     9. bottom-right-square: {x,o,b}\n    10. Class: {positive,negative}",
+    "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+    "license": "CC-BY license",
+    "source": "OpenML",
+    "sourceURI": "http://www.openml.org/d/50",
+    "approximateSize": "",
+    "datasetVersion": "2.0",
+    "datasetSchemaVersion": "3.2.0",
+    "redacted": false,
+    "digest": "8a6a187fa3ba54329e78b576e99bce145014064aad3f0e27a8864aa9c81c2d89"
+  },
+  "dataResources": [
+    {
+      "resID": "learningData",
+      "resPath": "tables/learningData.csv",
+      "resType": "table",
+      "resFormat": [
+        "text/csv"
+      ],
+      "isCollection": false,
+      "columns": [
+        {
+          "colIndex": 0,
+          "colName": "d3mIndex",
+          "colType": "integer",
+          "role": [
+            "index"
+          ]
+        },
+        {
+          "colIndex": 1,
+          "colName": "top-left-square",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 2,
+          "colName": "top-middle-square",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 3,
+          "colName": "top-right-square",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 4,
+          "colName": "middle-left-square",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 5,
+          "colName": "middle-middle-square",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 6,
+          "colName": "middle-right-square",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 7,
+          "colName": "bottom-left-square",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 8,
+          "colName": "bottom-middle-square",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 9,
+          "colName": "bottom-right-square",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 10,
+          "colName": "Class",
+          "colType": "categorical",
+          "role": [
+            "suggestedTarget"
+          ]
+        }
+      ]
+    }
+  ]
+}

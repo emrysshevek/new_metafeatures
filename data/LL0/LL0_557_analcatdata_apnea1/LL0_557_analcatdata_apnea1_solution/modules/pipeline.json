@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_557_analcatdata_apnea1_dataset",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator",
+    "params": {
+      "alpha": 0.01,
+      "epsilon": 0.03162277660168379,
+      "eta0": 0.01,
+      "fit_intercept": false,
+      "l1_ratio": 0.6000000000000001,
+      "learning_rate": "invscaling",
+      "loss": "squared_loss",
+      "penalty": "elasticnet",
+      "power_t": 0.25
+    }
+  },
+  "feature_extractors": {
+    "Scorer_1,Scorer_2,Subject": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": false,
+        "normalize_text": true,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "80ddb3dae5da11e781cc0002c95916b4"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectFromLasso",
+    "params": {
+      "alpha": 0.0005857020818056661,
+      "threshold": 1e-05
+    }
+  },
+  "performance": {
+    "cv_performance": 6423468.154664441,
+    "metric": "meanSquaredError"
+  }
+}

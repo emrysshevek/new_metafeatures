@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_475_analcatdata_germangss_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 0.001,
+      "fit_intercept": true,
+      "l1_ratio": 1.0,
+      "loss": "squared_hinge",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "Age,Time_of_survey,Schooling,Region,Count": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": false,
+        "normalize_text": false,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "5a0fefaee66411e797bd0002c958a326"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 89,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.3973545651913773,
+    "metric": "f1Macro"
+  }
+}

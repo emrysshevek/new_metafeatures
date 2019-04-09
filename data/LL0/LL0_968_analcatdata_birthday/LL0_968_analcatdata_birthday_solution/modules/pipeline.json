@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_968_analcatdata_birthday_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 1e-06,
+      "fit_intercept": true,
+      "l1_ratio": 0.2,
+      "loss": "perceptron",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "Month,Day,Births": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": true,
+        "normalize_text": true,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "69013792e66a11e78dedb4b52f5bd444"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC",
+    "params": {
+      "C": 21.049041445120196,
+      "threshold": 1e-05
+    }
+  },
+  "performance": {
+    "cv_performance": 0.829849012775842,
+    "metric": "f1Macro"
+  }
+}

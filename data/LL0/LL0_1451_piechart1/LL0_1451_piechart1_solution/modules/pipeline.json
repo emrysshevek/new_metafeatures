@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_1451_piechart1",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator", 
+    "params": {
+      "alpha": 0.1, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.1, 
+      "loss": "hinge", 
+      "penalty": "elasticnet"
+    }
+  }, 
+  "feature_extractors": {
+    "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,r,s,t,u,v,z,aa,ab,ac,ad,ae,af,ag,ah,ai,aj,ak,al,am,an,ao": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": true, 
+        "categorize": false, 
+        "normalize_text": false, 
+        "numeric_strategy": "median"
+      }, 
+      "uuid": "208a0d40e06611e799b05cb90191be84"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC", 
+    "params": {
+      "C": 0.35938136638046275, 
+      "threshold": 1e-05
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.7299235181644359, 
+    "metric": "f1Macro"
+  }
+}

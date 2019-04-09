@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_54_vehicle",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator", 
+    "params": {
+      "alpha": 0.001, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.5, 
+      "loss": "hinge", 
+      "penalty": "elasticnet"
+    }
+  }, 
+  "feature_extractors": {
+    "COMPACTNESS,CIRCULARITY,DISTANCE_CIRCULARITY,RADIUS_RATIO,PR.AXIS_ASPECT_RATIO,MAX.LENGTH_ASPECT_RATIO,SCATTER_RATIO,ELONGATEDNESS,PR.AXIS_RECTANGULARITY,MAX.LENGTH_RECTANGULARITY,SCALED_VARIANCE_MAJOR,SCALED_VARIANCE_MINOR,SCALED_RADIUS_OF_GYRATION,SKEWNESS_ABOUT_MAJOR,SKEWNESS_ABOUT_MINOR,KURTOSIS_ABOUT_MAJOR,KURTOSIS_ABOUT_MINOR,HOLLOWS_RATIO": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": true, 
+        "categorize": false, 
+        "normalize_text": true, 
+        "numeric_strategy": "mean"
+      }, 
+      "uuid": "8c16a3c8e06811e7a5415cb90191d1e4"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC", 
+    "params": {
+      "C": 0.07054802310718641, 
+      "threshold": 1e-05
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.7950775510948817, 
+    "metric": "f1Macro"
+  }
+}

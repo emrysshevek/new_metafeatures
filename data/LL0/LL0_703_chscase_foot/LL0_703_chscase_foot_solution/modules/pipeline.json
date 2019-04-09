@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_703_chscase_foot_dataset",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator",
+    "params": {
+      "alpha": 1e-07,
+      "epsilon": 0.03162277660168379,
+      "eta0": 0.1,
+      "fit_intercept": true,
+      "l1_ratio": 0.2,
+      "learning_rate": "optimal",
+      "loss": "huber",
+      "penalty": "elasticnet",
+      "power_t": 1.0
+    }
+  },
+  "feature_extractors": {
+    "col_1,col_2,col_3,col_4,col_5": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": false,
+        "normalize_text": true,
+        "numeric_strategy": "median"
+      },
+      "uuid": "2a37e8e2e66711e79c90b4b52f5bd444"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectFromLasso",
+    "params": {
+      "alpha": 0.034304692863149154,
+      "threshold": 1e-05
+    }
+  },
+  "performance": {
+    "cv_performance": 0.6117424697803333,
+    "metric": "meanSquaredError"
+  }
+}

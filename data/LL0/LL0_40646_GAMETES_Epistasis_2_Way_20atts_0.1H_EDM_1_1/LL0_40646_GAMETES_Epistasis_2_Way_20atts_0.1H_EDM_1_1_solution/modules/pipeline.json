@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_40646_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 0.001,
+      "fit_intercept": false,
+      "l1_ratio": 0.9,
+      "loss": "squared_hinge",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "N0,N1,N2,N3,N4,N5,N6,N7,N8,N9,N10,N11,N12,N13,N14,N15,N16,N17,P1,P2": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": true,
+        "normalize_text": true,
+        "numeric_strategy": "median"
+      },
+      "uuid": "810882cce5da11e7a87e0002c958a3e6"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC",
+    "params": {
+      "C": 4534.878508128582,
+      "threshold": 1e-05
+    }
+  },
+  "performance": {
+    "cv_performance": 0.52612089720612,
+    "metric": "f1Macro"
+  }
+}

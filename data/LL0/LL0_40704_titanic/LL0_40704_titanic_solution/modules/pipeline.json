@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_40704_titanic_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 1.0,
+      "fit_intercept": true,
+      "l1_ratio": 0.0,
+      "loss": "squared_hinge",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "Class,Age,Sex": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": false,
+        "categorize": false,
+        "normalize_text": true,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "80f38daee5da11e790b80002c958a402"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC",
+    "params": {
+      "C": 0.05994842503189409,
+      "threshold": 1e-05
+    }
+  },
+  "performance": {
+    "cv_performance": 0.7310404367789483,
+    "metric": "f1Macro"
+  }
+}

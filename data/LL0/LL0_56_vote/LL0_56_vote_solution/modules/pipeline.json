@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_56_vote",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator", 
+    "params": {
+      "alpha": 0.01, 
+      "fit_intercept": true, 
+      "l1_ratio": 1.0, 
+      "loss": "log", 
+      "penalty": "elasticnet"
+    }
+  }, 
+  "feature_extractors": {
+    "handicapped-infants,water-project-cost-sharing,adoption-of-the-budget-resolution,physician-fee-freeze,el-salvador-aid,religious-groups-in-schools,anti-satellite-test-ban,aid-to-nicaraguan-contras,mx-missile,immigration,synfuels-corporation-cutback,education-spending,superfund-right-to-sue,crime,duty-free-exports,export-administration-act-south-africa": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": true, 
+        "categorize": true, 
+        "normalize_text": true, 
+        "numeric_strategy": "median"
+      }, 
+      "uuid": "da06f04cdaf511e782280002c958a278"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC", 
+    "params": {
+      "C": 10235.310218990247, 
+      "threshold": 1e-05
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.9531795946890287, 
+    "metric": "f1Macro"
+  }
+}

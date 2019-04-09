@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_3_kr_vs_kp_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 0.0001,
+      "fit_intercept": true,
+      "l1_ratio": 0.9,
+      "loss": "log",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "bkblk,bknwy,bkon8,bkona,bkspr,bkxbq,bkxcr,bkxwp,blxwp,bxqsq,cntxt,dsopp,dwipd,hdchk,katri,mulch,qxmsq,r2ar8,reskd,reskr,rimmx,rkxwp,rxmsq,simpl,skach,skewr,skrxp,spcop,stlmt,thrsk,wkcti,wkna8,wknck,wkovl,wkpos,wtoeg": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": false,
+        "normalize_text": true,
+        "numeric_strategy": "median"
+      },
+      "uuid": "811bdad4e5da11e78fe40002c95916b4"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC",
+    "params": {
+      "C": 0.49770235643321087,
+      "threshold": 1e-05
+    }
+  },
+  "performance": {
+    "cv_performance": 0.9749234131911967,
+    "metric": "f1Macro"
+  }
+}

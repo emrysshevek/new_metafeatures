@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_1113_kddcup99",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator", 
+    "params": {
+      "alpha": 1e-05, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.8, 
+      "loss": "squared_hinge", 
+      "penalty": "elasticnet"
+    }
+  }, 
+  "feature_extractors": {
+    "duration,protocol_type,service,flag,src_bytes,dst_bytes,land,wrong_fragment,urgent,hot,num_failed_logins,logged_in,lnum_compromised,lroot_shell,lsu_attempted,lnum_root,lnum_file_creations,lnum_shells,lnum_access_files,lnum_outbound_cmds,is_host_login,is_guest_login,count,srv_count,serror_rate,srv_serror_rate,rerror_rate,srv_rerror_rate,same_srv_rate,diff_srv_rate,srv_diff_host_rate,dst_host_count,dst_host_srv_count,dst_host_same_srv_rate,dst_host_diff_srv_rate,dst_host_same_src_port_rate,dst_host_srv_diff_host_rate,dst_host_serror_rate,dst_host_srv_serror_rate,dst_host_rerror_rate,dst_host_srv_rerror_rate": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": false, 
+        "categorize": true, 
+        "normalize_text": false, 
+        "numeric_strategy": "mean"
+      }, 
+      "uuid": "024d72ccdb1b11e7a6160002c958a402"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification", 
+    "params": {
+      "percentile": 68, 
+      "score_func": "f_classif"
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.6289097485729825, 
+    "metric": "f1Macro"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_1549_autouniv_au6_750",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator", 
+    "params": {
+      "alpha": 1e-09, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.7000000000000001, 
+      "loss": "hinge", 
+      "penalty": "elasticnet"
+    }
+  }, 
+  "feature_extractors": {
+    "V1,V2,V3,V4,V5,V6,V7,V8,V9,V10,V11,V12,V13,V14,V15,V16,V17,V18,V19,V20,V21,V22,V23,V24,V25,V26,V27,V28,V29,V30,V31,V32,V33,V34,V35,V36,V37,V38,V39,V40": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": true, 
+        "categorize": true, 
+        "normalize_text": true, 
+        "numeric_strategy": "median"
+      }, 
+      "uuid": "56222552e03711e7a00b5cb901913d80"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC", 
+    "params": {
+      "C": 0.1873817422860384, 
+      "threshold": 1e-05
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.16190827156798257, 
+    "metric": "f1Macro"
+  }
+}

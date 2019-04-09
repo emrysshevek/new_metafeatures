@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_29_credit_approval",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator", 
+    "params": {
+      "alpha": 0.0001, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.4, 
+      "loss": "log", 
+      "penalty": "elasticnet"
+    }
+  }, 
+  "feature_extractors": {
+    "A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": false, 
+        "categorize": false, 
+        "normalize_text": true, 
+        "numeric_strategy": "mean"
+      }, 
+      "uuid": "32149decdafc11e7b98bb4b52f5be462"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification", 
+    "params": {
+      "percentile": 30, 
+      "score_func": "f_classif"
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.8784356185507818, 
+    "metric": "f1Macro"
+  }
+}

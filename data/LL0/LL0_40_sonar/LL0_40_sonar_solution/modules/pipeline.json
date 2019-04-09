@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_40_sonar_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 0.1,
+      "fit_intercept": true,
+      "l1_ratio": 0.9,
+      "loss": "hinge",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "attribute_1,attribute_2,attribute_3,attribute_4,attribute_5,attribute_6,attribute_7,attribute_8,attribute_9,attribute_10,attribute_11,attribute_12,attribute_13,attribute_14,attribute_15,attribute_16,attribute_17,attribute_18,attribute_19,attribute_20,attribute_21,attribute_22,attribute_23,attribute_24,attribute_25,attribute_26,attribute_27,attribute_28,attribute_29,attribute_30,attribute_31,attribute_32,attribute_33,attribute_34,attribute_35,attribute_36,attribute_37,attribute_38,attribute_39,attribute_40,attribute_41,attribute_42,attribute_43,attribute_44,attribute_45,attribute_46,attribute_47,attribute_48,attribute_49,attribute_50,attribute_51,attribute_52,attribute_53,attribute_54,attribute_55,attribute_56,attribute_57,attribute_58,attribute_59,attribute_60": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": false,
+        "categorize": false,
+        "normalize_text": false,
+        "numeric_strategy": "median"
+      },
+      "uuid": "80e006e4e5da11e7b123b4b52f5bb470"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 50,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.7600574712643677,
+    "metric": "f1Macro"
+  }
+}

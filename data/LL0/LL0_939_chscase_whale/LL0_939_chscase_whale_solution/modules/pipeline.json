@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_939_chscase_whale_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 0.001,
+      "fit_intercept": true,
+      "l1_ratio": 0.5,
+      "loss": "hinge",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "col_1,col_2,col_3,col_4,col_6,col_7,col_8,col_9,col_10": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": true,
+        "normalize_text": true,
+        "numeric_strategy": "median"
+      },
+      "uuid": "80dfbd7ee5da11e78cfa0002c95916b4"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC",
+    "params": {
+      "C": 0.022570197196339202,
+      "threshold": 1e-05
+    }
+  },
+  "performance": {
+    "cv_performance": 1.0,
+    "metric": "f1Macro"
+  }
+}

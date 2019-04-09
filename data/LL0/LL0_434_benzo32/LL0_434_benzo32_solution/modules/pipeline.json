@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_434_benzo32_dataset",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator",
+    "params": {
+      "alpha": 1e-07,
+      "epsilon": 0.31622776601683794,
+      "eta0": 0.01,
+      "fit_intercept": true,
+      "l1_ratio": 0.9,
+      "learning_rate": "invscaling",
+      "loss": "squared_loss",
+      "penalty": "elasticnet",
+      "power_t": 0.25
+    }
+  },
+  "feature_extractors": {
+    "oz1,oz2,oz3,oz4,oz5,oz6,oz7,oz8,oz9,oz10,oz11,oz12,oz13,oz14,oz15,oz16,oz17,oz18,oz19,oz20,oz21,oz22,oz23,oz24,oz25,oz26,oz27,oz28,oz29,oz30,oz31,oz32": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": false,
+        "categorize": true,
+        "normalize_text": true,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "2bdaa090e66711e7b6d1ac162dbeeb04"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileRegression",
+    "params": {
+      "percentile": 11,
+      "score_func": "f_regression"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.0426704260770267,
+    "metric": "meanSquaredError"
+  }
+}

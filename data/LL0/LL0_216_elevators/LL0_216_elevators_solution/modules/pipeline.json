@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_216_elevators",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator", 
+    "params": {
+      "alpha": 1e-08, 
+      "epsilon": 0.31622776601683794, 
+      "eta0": 0.01, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.2, 
+      "learning_rate": "invscaling", 
+      "loss": "squared_loss", 
+      "penalty": "elasticnet", 
+      "power_t": 0.25
+    }
+  }, 
+  "feature_extractors": {
+    "climbRate,Sgz,p,q,curRoll,absRoll,diffClb,diffRollRate,diffDiffClb,SaTime1,SaTime2,SaTime3,SaTime4,diffSaTime1,diffSaTime2,diffSaTime3,diffSaTime4,Sa": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": true, 
+        "categorize": false, 
+        "normalize_text": true, 
+        "numeric_strategy": "mean"
+      }, 
+      "uuid": "e766adeee07311e783dc5cb9018cd654"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectFromLasso", 
+    "params": {
+      "alpha": 0.00035938136638046257, 
+      "threshold": 1e-05
+    }
+  }, 
+  "performance": {
+    "cv_performance": 8.749783656634365e-06, 
+    "metric": "meanSquaredError"
+  }
+}

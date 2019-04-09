@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_854_fishcatch_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 1e-05,
+      "fit_intercept": false,
+      "l1_ratio": 0.7000000000000001,
+      "loss": "perceptron",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "Species,Length1,Length2,Length3,Height,Width,Sex": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": true,
+        "normalize_text": false,
+        "numeric_strategy": "median"
+      },
+      "uuid": "80eb434ce5da11e7af01b4b52f5bb470"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 61,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.9918343727898153,
+    "metric": "f1Macro"
+  }
+}

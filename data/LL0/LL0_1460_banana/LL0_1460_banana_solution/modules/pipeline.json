@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_1460_banana",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator", 
+    "params": {
+      "alpha": 0.1, 
+      "fit_intercept": false, 
+      "l1_ratio": 0.2, 
+      "loss": "hinge", 
+      "penalty": "elasticnet"
+    }
+  }, 
+  "feature_extractors": {
+    "V1,V2": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": true, 
+        "categorize": false, 
+        "normalize_text": false, 
+        "numeric_strategy": "median"
+      }, 
+      "uuid": "94eea524e08411e781595cb90191d448"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC", 
+    "params": {
+      "C": 10235.310218990247, 
+      "threshold": 1e-05
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.5854685394245219, 
+    "metric": "f1Macro"
+  }
+}

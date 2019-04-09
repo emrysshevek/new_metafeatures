@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_188_eucalyptus",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator", 
+    "params": {
+      "alpha": 0.01, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.1, 
+      "loss": "squared_hinge", 
+      "penalty": "elasticnet"
+    }
+  }, 
+  "feature_extractors": {
+    "Abbrev,Rep,Locality,Map_Ref,Latitude,Altitude,Rainfall,Frosts,Year,Sp,PMCno,DBH,Ht,Surv,Vig,Ins_res,Stem_Fm,Crown_Fm,Brnch_Fm": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": false, 
+        "categorize": false, 
+        "normalize_text": true, 
+        "numeric_strategy": "median"
+      }, 
+      "uuid": "d21f9c52e05f11e7be375cb901924a4c"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC", 
+    "params": {
+      "C": 24.77076355991709, 
+      "threshold": 1e-05
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.6034445678698722, 
+    "metric": "f1Macro"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_529_pollen",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator", 
+    "params": {
+      "alpha": 1e-09, 
+      "epsilon": 0.03162277660168379, 
+      "eta0": 0.1, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.0, 
+      "learning_rate": "invscaling", 
+      "loss": "huber", 
+      "penalty": "elasticnet", 
+      "power_t": 0.25
+    }
+  }, 
+  "feature_extractors": {
+    "RIDGE,NUB,CRACK,WEIGHT,OBSERVATION_NUMBER": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": false, 
+        "categorize": false, 
+        "normalize_text": true, 
+        "numeric_strategy": "mean"
+      }, 
+      "uuid": "da36cc72daf511e7b4c40002c958a278"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectPercentileRegression", 
+    "params": {
+      "percentile": 87, 
+      "score_func": "f_regression"
+    }
+  }, 
+  "performance": {
+    "cv_performance": 2.0276845041340397, 
+    "metric": "meanSquaredError"
+  }
+}

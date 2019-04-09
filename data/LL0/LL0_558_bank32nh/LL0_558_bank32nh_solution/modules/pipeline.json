@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_558_bank32nh",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator", 
+    "params": {
+      "alpha": 1e-05, 
+      "epsilon": 1.0, 
+      "eta0": 0.01, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.9, 
+      "learning_rate": "invscaling", 
+      "loss": "squared_loss", 
+      "penalty": "elasticnet", 
+      "power_t": 0.25
+    }
+  }, 
+  "feature_extractors": {
+    "a1cx,a1cy,a1sx,a1sy,a1rho,a1pop,a2cx,a2cy,a2sx,a2sy,a2rho,a2pop,a3cx,a3cy,a3sx,a3sy,a3rho,a3pop,temp,b1x,b1y,b1call,b1eff,b2x,b2y,b2call,b2eff,b3x,b3y,b3call,b3eff,mxql": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": true, 
+        "categorize": false, 
+        "normalize_text": false, 
+        "numeric_strategy": "mean"
+      }, 
+      "uuid": "e7379946e07311e7b5145cb9018cd654"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectPercentileRegression", 
+    "params": {
+      "percentile": 47, 
+      "score_func": "f_regression"
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.007106201981465762, 
+    "metric": "meanSquaredError"
+  }
+}

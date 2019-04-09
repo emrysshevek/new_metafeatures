@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_853_housing_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 0.0001,
+      "fit_intercept": true,
+      "l1_ratio": 0.8,
+      "loss": "log",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "CRIM,ZN,INDUS,CHAS,NOX,RM,AGE,DIS,RAD,TAX,PTRATIO,B,LSTAT": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": false,
+        "normalize_text": true,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "810c7c1ae5da11e7bfa8b4b52f5bb470"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 93,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.8801631820499745,
+    "metric": "f1Macro"
+  }
+}

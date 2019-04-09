@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_1008_analcatdata_reviewer_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 0.1,
+      "fit_intercept": true,
+      "l1_ratio": 0.8,
+      "loss": "squared_hinge",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "Film,Roger_Ebert,Jeffrey_Lyons,Michael_Medved,Rex_Reed,Gene_Shalit,Joel_Siegel,Gene_Siskel": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": false,
+        "normalize_text": false,
+        "numeric_strategy": "median"
+      },
+      "uuid": "80ef16dee5da11e7bd4b0002c95916b4"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC",
+    "params": {
+      "C": 47.50810162102793,
+      "threshold": 1e-05
+    }
+  },
+  "performance": {
+    "cv_performance": 0.6429170721884753,
+    "metric": "f1Macro"
+  }
+}

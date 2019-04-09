@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_37_diabetes",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator", 
+    "params": {
+      "alpha": 0.01, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.5, 
+      "loss": "log", 
+      "penalty": "elasticnet"
+    }
+  }, 
+  "feature_extractors": {
+    "preg,plas,pres,skin,insu,mass,pedi,age": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": false, 
+        "categorize": true, 
+        "normalize_text": false, 
+        "numeric_strategy": "median"
+      }, 
+      "uuid": "20613e56e06611e7af095cb90191be84"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification", 
+    "params": {
+      "percentile": 49, 
+      "score_func": "f_classif"
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.754411688497755, 
+    "metric": "f1Macro"
+  }
+}

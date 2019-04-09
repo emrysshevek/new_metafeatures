@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_469_analcatdata_dmft_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 0.001,
+      "fit_intercept": true,
+      "l1_ratio": 0.5,
+      "loss": "hinge",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "DMFT.Begin,DMFT.End,Gender,Ethnic": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": false,
+        "categorize": false,
+        "normalize_text": true,
+        "numeric_strategy": "median"
+      },
+      "uuid": "80d5760ce5da11e7a12cb4b52f5bb470"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC",
+    "params": {
+      "C": 0.07054802310718641,
+      "threshold": 1e-05
+    }
+  },
+  "performance": {
+    "cv_performance": 0.23060761521827433,
+    "metric": "f1Macro"
+  }
+}

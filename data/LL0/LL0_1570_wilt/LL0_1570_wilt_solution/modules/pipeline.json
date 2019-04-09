@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_1570_wilt",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator", 
+    "params": {
+      "alpha": 0.001, 
+      "fit_intercept": true, 
+      "l1_ratio": 1.0, 
+      "loss": "squared_hinge", 
+      "penalty": "elasticnet"
+    }
+  }, 
+  "feature_extractors": {
+    "V1,V2,V3,V4,V5": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": true, 
+        "categorize": false, 
+        "normalize_text": true, 
+        "numeric_strategy": "median"
+      }, 
+      "uuid": "9fa18d68e0f911e786bf5cb901912eec"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification", 
+    "params": {
+      "percentile": 89, 
+      "score_func": "f_classif"
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.8378258068781557, 
+    "metric": "f1Macro"
+  }
+}

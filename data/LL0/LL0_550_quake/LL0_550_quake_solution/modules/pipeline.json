@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_550_quake",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator", 
+    "params": {
+      "alpha": 0.001, 
+      "epsilon": 0.01, 
+      "eta0": 0.01, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.0, 
+      "learning_rate": "optimal", 
+      "loss": "squared_loss", 
+      "penalty": "elasticnet", 
+      "power_t": 0.75
+    }
+  }, 
+  "feature_extractors": {
+    "col_1,col_2,col_3": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": false, 
+        "categorize": true, 
+        "normalize_text": false, 
+        "numeric_strategy": "mean"
+      }, 
+      "uuid": "a956efeedaee11e79df50002c958a256"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectPercentileRegression", 
+    "params": {
+      "percentile": 16, 
+      "score_func": "f_regression"
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.03597104059968884, 
+    "metric": "meanSquaredError"
+  }
+}

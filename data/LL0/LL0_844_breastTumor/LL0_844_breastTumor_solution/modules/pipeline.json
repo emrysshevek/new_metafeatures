@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_844_breastTumor_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 1e-05,
+      "fit_intercept": true,
+      "l1_ratio": 0.2,
+      "loss": "hinge",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "age,menopause,inv-nodes,node-caps,deg-malig,breast,breast-quad,irradiation,recurrence": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": false,
+        "normalize_text": false,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "acec0c96e5db11e7b3f30002c958a3e6"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 15,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.6401117556896452,
+    "metric": "f1Macro"
+  }
+}

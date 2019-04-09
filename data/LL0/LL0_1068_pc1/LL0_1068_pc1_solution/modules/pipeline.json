@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_1068_pc1",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator", 
+    "params": {
+      "alpha": 0.01, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.1, 
+      "loss": "perceptron", 
+      "penalty": "elasticnet"
+    }
+  }, 
+  "feature_extractors": {
+    "loc,v(g),ev(g),iv(G),N,V,L,D,I,E,B,T,lOCode,lOComment,locCodeAndComment,lOBlank,uniq_Op,uniq_Opnd,total_Op,total_Opnd,branchCount": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": true, 
+        "categorize": true, 
+        "normalize_text": true, 
+        "numeric_strategy": "median"
+      }, 
+      "uuid": "75af68c4e02a11e7a68b5cb90191d490"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification", 
+    "params": {
+      "percentile": 18, 
+      "score_func": "f_classif"
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.6334113114077335, 
+    "metric": "f1Macro"
+  }
+}

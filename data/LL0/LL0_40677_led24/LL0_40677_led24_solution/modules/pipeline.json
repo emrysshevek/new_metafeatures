@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_40677_led24_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 0.1,
+      "fit_intercept": true,
+      "l1_ratio": 0.5,
+      "loss": "log",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "attribute#1,attribute#2,attribute#3,attribute#4,attribute#5,attribute#6,attribute#7,irrelevant1,irrelevant2,irrelevant3,irrelevant4,irrelevant5,irrelevant6,irrelevant7,irrelevant8,irrelevant9,irrelevant10,irrelevant11,irrelevant12,irrelevant13,irrelevant14,irrelevant15,irrelevant16,irrelevant17": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": false,
+        "categorize": false,
+        "normalize_text": true,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "813f99bae5da11e7b0600002c958a3e6"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC",
+    "params": {
+      "C": 100000.0,
+      "threshold": 1e-05
+    }
+  },
+  "performance": {
+    "cv_performance": 0.7291315282972499,
+    "metric": "f1Macro"
+  }
+}

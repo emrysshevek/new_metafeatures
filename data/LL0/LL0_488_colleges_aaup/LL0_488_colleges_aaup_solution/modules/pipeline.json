@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_488_colleges_aaup",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator", 
+    "params": {
+      "alpha": 0.001, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.2, 
+      "loss": "hinge", 
+      "penalty": "elasticnet"
+    }
+  }, 
+  "feature_extractors": {
+    "FICE,College_name,State,Average_salary-full_professors,Average_salary-associate_professors,Average_salary-assistant_professors,Average_salary-all_ranks,Average_compensation-full_professors,Average_compensation-associate_professors,Average_compensation-assistant_professors,Average_compensation-all_ranks,Number_of_full_professors,Number_of_associate_professors,Number_of_assistant_professors,Number_of_instructors,Number_of_faculty-all_ranks": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": true, 
+        "categorize": true, 
+        "normalize_text": true, 
+        "numeric_strategy": "mean"
+      }, 
+      "uuid": "e1e456dcdadd11e7b7140002c95915dc"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification", 
+    "params": {
+      "percentile": 87, 
+      "score_func": "f_classif"
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.6130821180034725, 
+    "metric": "f1Macro"
+  }
+}

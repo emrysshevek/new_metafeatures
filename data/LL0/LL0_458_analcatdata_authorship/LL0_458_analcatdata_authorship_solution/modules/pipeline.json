@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_458_analcatdata_authorship_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 0.1,
+      "fit_intercept": true,
+      "l1_ratio": 0.0,
+      "loss": "hinge",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "a,all,also,an,and,any,are,as,at,be,been,but,by,can,do,down,even,every,for,from,had,has,have,her,his,if,in,into,is,it,its,may,more,must,my,no,not,now,of,on,one,only,or,our,should,so,some,such,than,that,the,their,then,there,things,this,to,up,upon,was,were,what,when,which,who,will,with,would,your,BookID": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": false,
+        "categorize": false,
+        "normalize_text": true,
+        "numeric_strategy": "median"
+      },
+      "uuid": "8abc403ce66711e797480002c95915b0"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 97,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 1.0,
+    "metric": "f1Macro"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_1030_era",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator", 
+    "params": {
+      "alpha": 0.001, 
+      "epsilon": 1.0, 
+      "eta0": 0.001, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.0, 
+      "learning_rate": "optimal", 
+      "loss": "squared_loss", 
+      "penalty": "elasticnet", 
+      "power_t": 0.25
+    }
+  }, 
+  "feature_extractors": {
+    "in1,in2,in3,in4": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": true, 
+        "categorize": false, 
+        "normalize_text": true, 
+        "numeric_strategy": "median"
+      }, 
+      "uuid": "f59deff0daef11e7b2d70002c958a402"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectPercentileRegression", 
+    "params": {
+      "percentile": 52, 
+      "score_func": "f_regression"
+    }
+  }, 
+  "performance": {
+    "cv_performance": 2.440529869390354, 
+    "metric": "meanSquaredError"
+  }
+}

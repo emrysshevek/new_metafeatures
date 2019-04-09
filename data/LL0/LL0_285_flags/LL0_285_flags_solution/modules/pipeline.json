@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_285_flags_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 1e-05,
+      "fit_intercept": true,
+      "l1_ratio": 0.6000000000000001,
+      "loss": "log",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "name,1landmass,2zone,3area,population,language,bars,stripes,colours,red,green,blue,gold,white,black,orange,mainhue,circles,crosses,saltires,quarters,sunstars,crescent,triangle,icon,animate,text,topleft,botright": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": false,
+        "normalize_text": true,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "80e3c496e5da11e7bc71b4b52f5bb470"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 15,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.5353452138178223,
+    "metric": "f1Macro"
+  }
+}

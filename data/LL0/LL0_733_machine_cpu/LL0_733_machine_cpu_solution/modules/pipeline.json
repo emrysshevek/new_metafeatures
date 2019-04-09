@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_733_machine_cpu_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 1.0,
+      "fit_intercept": true,
+      "l1_ratio": 0.2,
+      "loss": "log",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "MYCT,MMIN,MMAX,CACH,CHMIN,CHMAX": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": false,
+        "normalize_text": true,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "80e84f98e5da11e7ad540002c958a402"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC",
+    "params": {
+      "C": 0.03678379771828634,
+      "threshold": 1e-05
+    }
+  },
+  "performance": {
+    "cv_performance": 0.9312195787654096,
+    "metric": "f1Macro"
+  }
+}

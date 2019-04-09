@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_1097_ICU_dataset",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator",
+    "params": {
+      "alpha": 1e-07,
+      "epsilon": 0.01,
+      "eta0": 0.01,
+      "fit_intercept": true,
+      "l1_ratio": 0.7000000000000001,
+      "learning_rate": "invscaling",
+      "loss": "squared_loss",
+      "penalty": "elasticnet",
+      "power_t": 0.0
+    }
+  },
+  "feature_extractors": {
+    "ID,STA,AGE,SEX,RAC,SER,CAN,CRN,INF,CPR,SYS,HRA,PRE,TYP,FRA,PO2,PH,PCO,BIC,CRE": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": false,
+        "normalize_text": false,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "8a61d0fce66711e7bbceb4b52f5bf40c"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectFromLasso",
+    "params": {
+      "alpha": 0.1261856883066021,
+      "threshold": 1e-05
+    }
+  },
+  "performance": {
+    "cv_performance": 0.16836834247242133,
+    "metric": "meanSquaredError"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_1490_planning_relax_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 1e-08,
+      "fit_intercept": true,
+      "l1_ratio": 0.7000000000000001,
+      "loss": "perceptron",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "V1,V2,V3,V4,V5,V6,V7,V8,V9,V10,V11,V12": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": false,
+        "categorize": false,
+        "normalize_text": true,
+        "numeric_strategy": "median"
+      },
+      "uuid": "80e88b7ae5da11e78f5c0002c958a402"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC",
+    "params": {
+      "C": 0.04328761281083057,
+      "threshold": 1e-05
+    }
+  },
+  "performance": {
+    "cv_performance": 0.5487637362637363,
+    "metric": "f1Macro"
+  }
+}

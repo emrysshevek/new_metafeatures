@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_811_rmftsa_ctoarrivals_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 1e-05,
+      "fit_intercept": true,
+      "l1_ratio": 0.6000000000000001,
+      "loss": "hinge",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "year,month": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": false,
+        "categorize": false,
+        "normalize_text": true,
+        "numeric_strategy": "median"
+      },
+      "uuid": "80ecefeee5da11e78197b4b52f5bb470"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 97,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.9602251407129456,
+    "metric": "f1Macro"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_1442_MegaWatt1_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 0.01,
+      "fit_intercept": true,
+      "l1_ratio": 0.1,
+      "loss": "log",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,r,s,t,u,v,z,aa,ab,ac,ad,ae,af,ag,ah,ai,aj,ak,al,am,an,ao": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": false,
+        "normalize_text": false,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "ace14162e5db11e7a0d90002c958a3da"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC",
+    "params": {
+      "C": 0.013848863713938732,
+      "threshold": 1e-05
+    }
+  },
+  "performance": {
+    "cv_performance": 0.7432005060088551,
+    "metric": "f1Macro"
+  }
+}

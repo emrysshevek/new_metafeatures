@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_231_hungarian_dataset",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator",
+    "params": {
+      "alpha": 1e-09,
+      "epsilon": 0.03162277660168379,
+      "eta0": 0.01,
+      "fit_intercept": true,
+      "l1_ratio": 0.4,
+      "learning_rate": "invscaling",
+      "loss": "squared_loss",
+      "penalty": "elasticnet",
+      "power_t": 0.5
+    }
+  },
+  "feature_extractors": {
+    "age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": false,
+        "categorize": false,
+        "normalize_text": true,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "8118ecdee5da11e78e41b4b52f5bb470"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileRegression",
+    "params": {
+      "percentile": 95,
+      "score_func": "f_regression"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.11497624216725678,
+    "metric": "meanSquaredError"
+  }
+}

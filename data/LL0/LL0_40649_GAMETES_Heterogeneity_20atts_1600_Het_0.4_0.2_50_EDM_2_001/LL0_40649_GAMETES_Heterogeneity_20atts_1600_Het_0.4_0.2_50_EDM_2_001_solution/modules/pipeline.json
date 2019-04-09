@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_40649_GAMETES_Heterogeneity_20atts_1600_Het_0.4_0.2_50_EDM_2_001_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 0.1,
+      "fit_intercept": true,
+      "l1_ratio": 1.0,
+      "loss": "squared_hinge",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "N0,N1,N2,N3,N4,N5,N6,N7,N8,N9,N10,N11,N12,N13,N14,N15,M0P0,M0P1,M1P0,M1P1": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": false,
+        "categorize": true,
+        "normalize_text": true,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "80f923eae5da11e78bdb0002c958a3e6"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 92,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.5159792306567208,
+    "metric": "f1Macro"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_223_stock",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator", 
+    "params": {
+      "alpha": 0.001, 
+      "epsilon": 0.03162277660168379, 
+      "eta0": 0.1, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.4, 
+      "learning_rate": "optimal", 
+      "loss": "squared_loss", 
+      "penalty": "elasticnet", 
+      "power_t": 1.0
+    }
+  }, 
+  "feature_extractors": {
+    "company1,company2,company3,company4,company5,company6,company7,company8,company9": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": true, 
+        "categorize": true, 
+        "normalize_text": false, 
+        "numeric_strategy": "mean"
+      }, 
+      "uuid": "331001aadafc11e7a0a2ac162dbe6b9a"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectFromLasso", 
+    "params": {
+      "alpha": 0.06579332246575675, 
+      "threshold": 1e-05
+    }
+  }, 
+  "performance": {
+    "cv_performance": 5.553620637858059, 
+    "metric": "meanSquaredError"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_296_ailerons",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator", 
+    "params": {
+      "alpha": 0.01, 
+      "epsilon": 0.03162277660168379, 
+      "eta0": 0.1, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.0, 
+      "learning_rate": "optimal", 
+      "loss": "huber", 
+      "penalty": "elasticnet", 
+      "power_t": 0.75
+    }
+  }, 
+  "feature_extractors": {
+    "climbRate,Sgz,p,q,curPitch,curRoll,absRoll,diffClb,diffRollRate,diffDiffClb,SeTime1,SeTime2,SeTime3,SeTime4,SeTime5,SeTime6,SeTime7,SeTime8,SeTime9,SeTime10,SeTime11,SeTime12,SeTime13,SeTime14,diffSeTime1,diffSeTime2,diffSeTime3,diffSeTime4,diffSeTime5,diffSeTime6,diffSeTime7,diffSeTime8,diffSeTime9,diffSeTime10,diffSeTime11,diffSeTime12,diffSeTime13,diffSeTime14,alpha,Se": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": true, 
+        "categorize": false, 
+        "normalize_text": true, 
+        "numeric_strategy": "median"
+      }, 
+      "uuid": "22833496e06611e7990c5cb90191be84"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectPercentileRegression", 
+    "params": {
+      "percentile": 44, 
+      "score_func": "f_regression"
+    }
+  }, 
+  "performance": {
+    "cv_performance": 3.1174522083481436e-08, 
+    "metric": "meanSquaredError"
+  }
+}

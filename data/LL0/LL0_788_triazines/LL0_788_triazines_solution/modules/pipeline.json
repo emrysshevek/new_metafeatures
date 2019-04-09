@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_788_triazines_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 0.01,
+      "fit_intercept": true,
+      "l1_ratio": 0.2,
+      "loss": "log",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "p1_polar,p1_size,p1_flex,p1_h_doner,p1_h_acceptor,p1_pi_doner,p1_pi_acceptor,p1_polarisable,p1_sigma,p1_branch,p2_polar,p2_size,p2_flex,p2_h_doner,p2_h_acceptor,p2_pi_doner,p2_pi_acceptor,p2_polarisable,p2_sigma,p2_branch,p3_polar,p3_size,p3_flex,p3_h_doner,p3_h_acceptor,p3_pi_doner,p3_pi_acceptor,p3_polarisable,p3_sigma,p3_branch,p4_polar,p4_size,p4_flex,p4_h_doner,p4_h_acceptor,p4_pi_doner,p4_pi_acceptor,p4_polarisable,p4_sigma,p4_branch,p5_polar,p5_size,p5_flex,p5_h_doner,p5_h_acceptor,p5_pi_doner,p5_pi_acceptor,p5_polarisable,p5_sigma,p5_branch,p6_polar,p6_size,p6_flex,p6_h_doner,p6_h_acceptor,p6_pi_doner,p6_pi_acceptor,p6_polarisable,p6_sigma,p6_branch": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": false,
+        "categorize": true,
+        "normalize_text": false,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "8a649788e66711e78b050002c958a426"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 56,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.7779433681073025,
+    "metric": "f1Macro"
+  }
+}

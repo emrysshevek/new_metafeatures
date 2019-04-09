@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_522_pm10",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator", 
+    "params": {
+      "alpha": 0.0001, 
+      "epsilon": 0.03162277660168379, 
+      "eta0": 0.1, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.30000000000000004, 
+      "learning_rate": "invscaling", 
+      "loss": "huber", 
+      "penalty": "elasticnet", 
+      "power_t": 0.0
+    }
+  }, 
+  "feature_extractors": {
+    "cars_per_hour,temperature_at_2m,wind_speed,temperature_diff_2m_25m,wind_direction,hour_of_day,day": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": true, 
+        "categorize": true, 
+        "normalize_text": true, 
+        "numeric_strategy": "mean"
+      }, 
+      "uuid": "a95d616cdaee11e79d8e0002c958a256"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectFromLasso", 
+    "params": {
+      "alpha": 0.09111627561154886, 
+      "threshold": 1e-05
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.666695413565489, 
+    "metric": "meanSquaredError"
+  }
+}

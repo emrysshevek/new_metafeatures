@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_694_diggle_table_a2",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator", 
+    "params": {
+      "alpha": 1e-05, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.9, 
+      "loss": "log", 
+      "penalty": "elasticnet"
+    }
+  }, 
+  "feature_extractors": {
+    "col_2,col_3,col_4,col_5,col_6,col_7,col_8,col_9": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": false, 
+        "categorize": true, 
+        "normalize_text": false, 
+        "numeric_strategy": "median"
+      }, 
+      "uuid": "9fa06636e0f911e7b8f95cb9018c918c"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC", 
+    "params": {
+      "C": 464.1588833612773, 
+      "threshold": 1e-05
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.9008950342814488, 
+    "metric": "f1Macro"
+  }
+}

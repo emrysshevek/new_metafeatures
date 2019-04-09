@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_511_plasma_retinol",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator", 
+    "params": {
+      "alpha": 1e-06, 
+      "epsilon": 0.03162277660168379, 
+      "eta0": 0.1, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.0, 
+      "learning_rate": "optimal", 
+      "loss": "huber", 
+      "penalty": "elasticnet", 
+      "power_t": 0.75
+    }
+  }, 
+  "feature_extractors": {
+    "AGE,SEX,SMOKSTAT,QUETELET,VITUSE,CALORIES,FAT,FIBER,ALCOHOL,CHOLESTEROL,BETADIET,RETDIET,BETAPLASMA": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": true, 
+        "categorize": false, 
+        "normalize_text": true, 
+        "numeric_strategy": "mean"
+      }, 
+      "uuid": "e440be06db1a11e78a640002c958a42c"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectFromLasso", 
+    "params": {
+      "alpha": 27.1858824273294, 
+      "threshold": 1e-05
+    }
+  }, 
+  "performance": {
+    "cv_performance": 44097.62156591328, 
+    "metric": "meanSquaredError"
+  }
+}

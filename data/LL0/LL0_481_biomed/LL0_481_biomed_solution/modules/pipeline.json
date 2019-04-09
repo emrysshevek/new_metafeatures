@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_481_biomed_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 1.0,
+      "fit_intercept": false,
+      "l1_ratio": 0.1,
+      "loss": "squared_hinge",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "Observation_number,Hospital_identification_number_for_blood_sample,Age_of_patient,Date_that_blood_sample_was_taken,ml,m2,m3,m4": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": false,
+        "normalize_text": true,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "80d1eb54e5da11e7b7390002c95916b4"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 30,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.8962962962962964,
+    "metric": "f1Macro"
+  }
+}

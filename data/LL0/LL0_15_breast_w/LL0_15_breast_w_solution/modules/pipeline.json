@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_15_breast_w_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 1.0,
+      "fit_intercept": false,
+      "l1_ratio": 0.30000000000000004,
+      "loss": "squared_hinge",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "Clump_Thickness,Cell_Size_Uniformity,Cell_Shape_Uniformity,Marginal_Adhesion,Single_Epi_Cell_Size,Bare_Nuclei,Bland_Chromatin,Normal_Nucleoli,Mitoses": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": false,
+        "normalize_text": true,
+        "numeric_strategy": "median"
+      },
+      "uuid": "80dec27ae5da11e79da80002c95916b4"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 81,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.974578786556089,
+    "metric": "f1Macro"
+  }
+}

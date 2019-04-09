@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_452_analcatdata_broadwaymult_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 0.001,
+      "fit_intercept": true,
+      "l1_ratio": 0.5,
+      "loss": "hinge",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "Show,Type,Revival,NYT_rating,DN_rating,Week_1_attendance,Award": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": false,
+        "normalize_text": true,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "5a15ba60e66411e79c33b4b52f5bf448"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC",
+    "params": {
+      "C": 0.07054802310718641,
+      "threshold": 1e-05
+    }
+  },
+  "performance": {
+    "cv_performance": 0.5179257574466611,
+    "metric": "f1Macro"
+  }
+}

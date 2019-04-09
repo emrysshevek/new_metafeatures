@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_547_no2",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator", 
+    "params": {
+      "alpha": 0.001, 
+      "epsilon": 1.0, 
+      "eta0": 0.01, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.7000000000000001, 
+      "learning_rate": "optimal", 
+      "loss": "squared_loss", 
+      "penalty": "elasticnet", 
+      "power_t": 0.5
+    }
+  }, 
+  "feature_extractors": {
+    "cars_per_hour,temperature_at_2m,wind_speed,temperature_diff_2m_25m,wind_direction,hour_of_day,day": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": true, 
+        "categorize": false, 
+        "normalize_text": false, 
+        "numeric_strategy": "mean"
+      }, 
+      "uuid": "e11268aedb2111e7af130002c9591624"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectPercentileRegression", 
+    "params": {
+      "percentile": 97, 
+      "score_func": "f_regression"
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.28151813179165097, 
+    "metric": "meanSquaredError"
+  }
+}

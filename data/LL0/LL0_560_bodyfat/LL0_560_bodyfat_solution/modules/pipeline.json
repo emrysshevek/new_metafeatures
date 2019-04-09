@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_560_bodyfat_dataset",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator",
+    "params": {
+      "alpha": 1e-09,
+      "epsilon": 0.01,
+      "eta0": 0.1,
+      "fit_intercept": true,
+      "l1_ratio": 0.6000000000000001,
+      "learning_rate": "optimal",
+      "loss": "huber",
+      "penalty": "elasticnet",
+      "power_t": 0.0
+    }
+  },
+  "feature_extractors": {
+    "Density,Age,Weight,Height,Neck,Chest,Abdomen,Hip,Thigh,Knee,Ankle,Biceps,Forearm,Wrist": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": true,
+        "normalize_text": true,
+        "numeric_strategy": "median"
+      },
+      "uuid": "80ec9814e5da11e7a72fb4b52f5bb470"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectFromLasso",
+    "params": {
+      "alpha": 8.697490026177835,
+      "threshold": 1e-05
+    }
+  },
+  "performance": {
+    "cv_performance": 0.4941369195280825,
+    "metric": "meanSquaredError"
+  }
+}

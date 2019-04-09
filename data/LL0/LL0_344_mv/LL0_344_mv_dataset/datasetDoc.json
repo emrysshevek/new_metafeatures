@@ -1,0 +1,125 @@
+{
+  "about": {
+    "datasetID": "LL0_344_mv_dataset",
+    "datasetName": "LL0_344_mv",
+    "description": "**Author**: Luis Torgo  \n**Source**: [original](http://www.dcc.fc.up.pt/~ltorgo/Regression/DataSets.html) -   \n**Please cite**:   \n\nThis is an artificial data set with dependencies between the attribute values. The cases are generated using the following method:\n\nX1 : uniformly distributed over [-5,5]\nX2 : uniformly distributed over [-15,-10]\nX3 : IF (X1 > 0) THEN X3 = green\n ELSE X3 = red with probability 0.4 and X4=brown with prob. 0.6\nX4 : IF (X3=green) THEN X4=X1+2X2\n ELSE X4=X1/2 with prob. 0.3, and X4=X2/2 with prob. 0.7\nX5 : uniformly distributed over [-1,1]\nX6 : X6=X4*[epsilon], where [epsilon] is uniformly distribute over [0,5]\nX7 : X7=yes with prob. 0.3 and X7=no with prob. 0.7\nX8 : IF (X5 < 0.5) THEN X8 = normal ELSE X8 = large\nX9 : uniformly distributed over [100,500]\nX10 : uniformly distributed integer over the interval [1000,1200]\n \nObtain the value of the target variable Y using the rules:\nIF (X2 > 2 ) THEN Y = 35 - 0.5 X4\n ELSE IF (-2 <= X4 <= 2) THEN Y = 10 - 2 X1\n ELSE IF (X7 = yes) THEN Y = 3 -X1/X4\n ELSE IF (X8 = normal) THEN Y = X6 + X1\n ELSE Y = X1/2\n\nSource: collection of regression datasets by Luis Torgo (ltorgo@ncc.up.pt) at http://www.dcc.fc.up.pt/~ltorgo/Regression/DataSets.html",
+    "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+    "license": "CC-BY license",
+    "source": "OpenML",
+    "sourceURI": "http://www.openml.org/d/344",
+    "approximateSize": "",
+    "datasetSchemaVersion": "3.2.0",
+    "redacted": false,
+    "datasetVersion": "2.0",
+    "digest": "efe842a7879325e9f430e0ffbb082d9b6b7737536474822e86df45c085b83e1a"
+  },
+  "dataResources": [
+    {
+      "resID": "learningData",
+      "resPath": "tables/learningData.csv",
+      "resType": "table",
+      "resFormat": [
+        "text/csv"
+      ],
+      "isCollection": false,
+      "columns": [
+        {
+          "colIndex": 0,
+          "colName": "d3mIndex",
+          "colType": "integer",
+          "role": [
+            "index"
+          ]
+        },
+        {
+          "colIndex": 1,
+          "colName": "x1",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 2,
+          "colName": "x2",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 3,
+          "colName": "x3",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 4,
+          "colName": "x4",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 5,
+          "colName": "x5",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 6,
+          "colName": "x6",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 7,
+          "colName": "x7",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 8,
+          "colName": "x8",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 9,
+          "colName": "x9",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 10,
+          "colName": "x10",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 11,
+          "colName": "y",
+          "colType": "real",
+          "role": [
+            "suggestedTarget"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_11_balance_scale",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator", 
+    "params": {
+      "alpha": 1e-05, 
+      "fit_intercept": false, 
+      "l1_ratio": 0.9, 
+      "loss": "hinge", 
+      "penalty": "elasticnet"
+    }
+  }, 
+  "feature_extractors": {
+    "left-weight,left-distance,right-weight,right-distance": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": true, 
+        "categorize": true, 
+        "normalize_text": true, 
+        "numeric_strategy": "median"
+      }, 
+      "uuid": "d0c0d3c6e05f11e7976f5cb9018cd640"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC", 
+    "params": {
+      "C": 1232.8467394420659, 
+      "threshold": 1e-05
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.937085950568223, 
+    "metric": "f1Macro"
+  }
+}

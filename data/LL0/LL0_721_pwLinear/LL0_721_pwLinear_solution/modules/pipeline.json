@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_721_pwLinear_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 1e-05,
+      "fit_intercept": false,
+      "l1_ratio": 0.0,
+      "loss": "log",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "a1,a2,a3,a4,a5,a6,a7,a8,a9,a10": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": false,
+        "normalize_text": false,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "8a9be8c8e66711e798160002c95915b0"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 19,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.8757332510033962,
+    "metric": "f1Macro"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_40712_crx_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 0.01,
+      "fit_intercept": true,
+      "l1_ratio": 0.30000000000000004,
+      "loss": "log",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": true,
+        "normalize_text": true,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "80e575e8e5da11e78b130002c958a402"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 53,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.8621345719834148,
+    "metric": "f1Macro"
+  }
+}

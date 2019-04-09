@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_1435_fourclass_dataset",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator",
+    "params": {
+      "alpha": 0.001,
+      "epsilon": 0.03162277660168379,
+      "eta0": 0.1,
+      "fit_intercept": true,
+      "l1_ratio": 0.0,
+      "learning_rate": "optimal",
+      "loss": "squared_loss",
+      "penalty": "elasticnet",
+      "power_t": 0.25
+    }
+  },
+  "feature_extractors": {
+    "att_1,att_2": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": false,
+        "categorize": false,
+        "normalize_text": true,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "811e8ce8e5da11e7b3c7b4b52f5bb470"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectFromLasso",
+    "params": {
+      "alpha": 0.0029836472402833374,
+      "threshold": 1e-05
+    }
+  },
+  "performance": {
+    "cv_performance": 0.6327346975956036,
+    "metric": "meanSquaredError"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_40705_tokyo1_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 0.001,
+      "fit_intercept": true,
+      "l1_ratio": 0.8,
+      "loss": "hinge",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "cpu_avg_user,cpu_avg_sys,cpu_avg_busy,cpu_avg_wait,cpu_avg_idle,cpu_avg_waste,cpu_max_user,cpu_max_sys,cpu_max_busy,cpu_max_wait,cpu_max_idle,cpu_max_waste,cpu_frac_busy,io_iget,io_bread,io_bwrite,io_lread,io_lwrite,io_phread,io_phwrite,io_wcancel,io_namei,io_dirblk,disk_avg_active,disk_max_active,disk_frac_active,disk_avg_read,disk_avg_write,disk_avg_total,disk_max_read,disk_max_write,disk_max_total,disk_frac_busy,net_avg_read,net_avg_write,net_avg_total,net_max_read,net_max_write,net_max_total,net_frac_busy,mem_swap,mem_fault,mem_tlbflush,syscall_total": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": true,
+        "normalize_text": true,
+        "numeric_strategy": "median"
+      },
+      "uuid": "80e9ffbee5da11e7b8e80002c958a402"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 85,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.9238878285127001,
+    "metric": "f1Macro"
+  }
+}

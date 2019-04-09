@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_941_lowbwt_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 1e-09,
+      "fit_intercept": true,
+      "l1_ratio": 0.9,
+      "loss": "squared_hinge",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "LOW,AGE,LWT,RACE,SMOKE,PTL,HT,UI,FTV": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": true,
+        "normalize_text": false,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "80d0409ce5da11e797fbb4b52f5bb470"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 34,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.8611147369795066,
+    "metric": "f1Macro"
+  }
+}

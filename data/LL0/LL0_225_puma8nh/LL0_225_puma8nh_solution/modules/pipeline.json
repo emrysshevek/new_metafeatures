@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_225_puma8nh",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator", 
+    "params": {
+      "alpha": 0.001, 
+      "epsilon": 0.01, 
+      "eta0": 0.1, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.6000000000000001, 
+      "learning_rate": "optimal", 
+      "loss": "squared_loss", 
+      "penalty": "elasticnet", 
+      "power_t": 0.75
+    }
+  }, 
+  "feature_extractors": {
+    "theta1,theta2,theta3,thetad1,thetad2,thetad3,tau1,tau2": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": true, 
+        "categorize": false, 
+        "normalize_text": false, 
+        "numeric_strategy": "median"
+      }, 
+      "uuid": "75c21a28e02a11e7942f5cb9018cd6d8"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectFromLasso", 
+    "params": {
+      "alpha": 0.1261856883066021, 
+      "threshold": 1e-05
+    }
+  }, 
+  "performance": {
+    "cv_performance": 19.955249122649835, 
+    "metric": "meanSquaredError"
+  }
+}

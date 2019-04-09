@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../301_ozone_level_dataset",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator",
+    "params": {
+      "alpha": 1e-06,
+      "epsilon": 0.31622776601683794,
+      "eta0": 0.01,
+      "fit_intercept": true,
+      "l1_ratio": 0.8,
+      "learning_rate": "optimal",
+      "loss": "squared_loss",
+      "penalty": "elasticnet",
+      "power_t": 0.75
+    }
+  },
+  "feature_extractors": {
+    "WSR0,WSR1,WSR2,WSR3,WSR4,WSR5,WSR6,WSR7,WSR8,WSR9,WSR10,WSR11,WSR12,WSR13,WSR14,WSR15,WSR16,WSR17,WSR18,WSR19,WSR20,WSR21,WSR22,WSR23,WSR_PK,WSR_AV,T0,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13,T14,T15,T16,T17,T18,T19,T20,T21,T22,T23,T_PK,T_AV,T85,RH85,U85,V85,HT85,T70,RH70,U70,V70,HT70,T50,RH50,U50,V50,HT50,KI,TT,SLP,SLP_,Precp": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": false,
+        "categorize": false,
+        "normalize_text": true,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "7fe25830db0f11e798450002c9591588"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectFromLasso",
+    "params": {
+      "alpha": 0.007924828983539169,
+      "threshold": 1e-05
+    }
+  },
+  "performance": {
+    "cv_performance": 0.02459044486618107,
+    "metric": "meanSquaredError"
+  }
+}

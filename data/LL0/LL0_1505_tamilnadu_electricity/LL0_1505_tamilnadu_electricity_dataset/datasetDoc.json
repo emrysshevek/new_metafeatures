@@ -1,0 +1,69 @@
+{
+  "about": {
+    "datasetID": "LL0_1505_tamilnadu_electricity_dataset",
+    "datasetName": "LL0_1505_tamilnadu_electricity",
+    "description": "**Author**: K.Kalyani.    \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Tamilnadu+Electricity+Board+Hourly+Readings) - 2013  \n**Please cite**:   \n\n### Description\n\nTamilnadu Electricity Board Hourly Readings dataset. \n\n### Source\n```\nK.Kalyani ,kkalyanims '@' gmail.com,  \nT.U.K Arts College,Karanthai,Thanjavur.\n```\n\n### Data Set Information\n\nReal-time readings were collected from residential, commercial, industrial and agriculture to find the accuracy consumption in Tamil Nadu, around Thanajvur. \n\n**Note**: the attribute Sector was removed from original source since it was constant to all instances.\n\n### Attribute Information:\n```\n1 - ForkVA (V1) : real\n2 - ForkW (V2) : real\n3 - ServiceID (V3): factor\n\n4 - Type (Class): \n- Bank  \n- AutomobileIndustry \n- BpoIndustry   \n- CementIndustry   \n- Farmers1   \n- Farmers2   \n- HealthCareResources \n- TextileIndustry \n- PoultryIndustry \n- Residential(individual)  \n- Residential(Apartments)    \n- FoodIndustry   \n- ChemicalIndustry   \n- Handlooms   \n- FertilizerIndustry   \n- Hostel   \n- Hospital   \n- Supermarket   \n- Theatre   \n- University",
+    "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+    "license": "CC-BY license",
+    "source": "OpenML",
+    "sourceURI": "http://www.openml.org/d/1505",
+    "approximateSize": "",
+    "datasetSchemaVersion": "3.2.0",
+    "redacted": false,
+    "datasetVersion": "2.0",
+    "digest": "4e5815a4e27ff7cae10b471a676dc65e5a08a1e89327fe163b147c51d0f84ee6"
+  },
+  "dataResources": [
+    {
+      "resID": "learningData",
+      "resPath": "tables/learningData.csv",
+      "resType": "table",
+      "resFormat": [
+        "text/csv"
+      ],
+      "isCollection": false,
+      "columns": [
+        {
+          "colIndex": 0,
+          "colName": "d3mIndex",
+          "colType": "integer",
+          "role": [
+            "index"
+          ]
+        },
+        {
+          "colIndex": 1,
+          "colName": "V1",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 2,
+          "colName": "V2",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 3,
+          "colName": "V3",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 4,
+          "colName": "Class",
+          "colType": "categorical",
+          "role": [
+            "suggestedTarget"
+          ]
+        }
+      ]
+    }
+  ]
+}

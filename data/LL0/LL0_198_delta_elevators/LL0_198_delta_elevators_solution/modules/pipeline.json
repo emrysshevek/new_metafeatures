@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_198_delta_elevators",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator", 
+    "params": {
+      "alpha": 1e-06, 
+      "epsilon": 0.03162277660168379, 
+      "eta0": 0.1, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.2, 
+      "learning_rate": "invscaling", 
+      "loss": "squared_loss", 
+      "penalty": "elasticnet", 
+      "power_t": 0.5
+    }
+  }, 
+  "feature_extractors": {
+    "climbRate,Altitude,RollRate,curRoll,diffClb,diffDiffClb": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": false, 
+        "categorize": false, 
+        "normalize_text": true, 
+        "numeric_strategy": "mean"
+      }, 
+      "uuid": "3364be98dafc11e7bb7dac162dbe6b9a"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectPercentileRegression", 
+    "params": {
+      "percentile": 90, 
+      "score_func": "f_regression"
+    }
+  }, 
+  "performance": {
+    "cv_performance": 2.124219500261037e-06, 
+    "metric": "meanSquaredError"
+  }
+}

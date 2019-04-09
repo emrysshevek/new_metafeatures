@@ -1,0 +1,117 @@
+{
+  "about": {
+    "datasetID": "LL0_23_cmc_dataset",
+    "datasetName": "LL0_23_cmc",
+    "description": "**Author**:   \n**Source**: [As obtained from UCI](https://archive.ics.uci.edu/ml/datasets/Contraceptive+Method+Choice)\n**Please cite**:   \n\n1. Title: Contraceptive Method Choice\n \n 2. Sources:\n    (a) Origin:  This dataset is a subset of the 1987 National Indonesia\n                 Contraceptive Prevalence Survey\n    (b) Creator: Tjen-Sien Lim (limt@stat.wisc.edu)\n    (c) Donor:   Tjen-Sien Lim (limt@stat.wisc.edu)\n    (c) Date:    June 7, 1997\n \n 3. Past Usage:\n    Lim, T.-S., Loh, W.-Y. & Shih, Y.-S. (1999). A Comparison of\n    Prediction Accuracy, Complexity, and Training Time of Thirty-three\n    Old and New Classification Algorithms. Machine Learning. Forthcoming.\n    (ftp://ftp.stat.wisc.edu/pub/loh/treeprogs/quest1.7/mach1317.pdf or\n    (http://www.stat.wisc.edu/~limt/mach1317.pdf)\n \n 4. Relevant Information:\n    This dataset is a subset of the 1987 National Indonesia Contraceptive\n    Prevalence Survey. The samples are married women who were either not \n    pregnant or do not know if they were at the time of interview. The \n    problem is to predict the current contraceptive method choice \n    (no use, long-term methods, or short-term methods) of a woman based \n    on her demographic and socio-economic characteristics.\n \n 5. Number of Instances: 1473\n \n 6. Number of Attributes: 10 (including the class attribute)\n \n 7. Attribute Information:\n \n    1. Wife's age                     (numerical)\n    2. Wife's education               (categorical)      1=low, 2, 3, 4=high\n    3. Husband's education            (categorical)      1=low, 2, 3, 4=high\n    4. Number of children ever born   (numerical)\n    5. Wife's religion                (binary)           0=Non-Islam, 1=Islam\n    6. Wife's now working?            (binary)           0=Yes, 1=No\n    7. Husband's occupation           (categorical)      1, 2, 3, 4\n    8. Standard-of-living index       (categorical)      1=low, 2, 3, 4=high\n    9. Media exposure                 (binary)           0=Good, 1=Not good\n    10. Contraceptive method used     (class attribute)  1=No-use \n                                                         2=Long-term\n                                                         3=Short-term\n \n 8. Missing Attribute Values: None\n\n Information about the dataset\n CLASSTYPE: nominal\n CLASSINDEX: last",
+    "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+    "license": "CC-BY license",
+    "source": "OpenML",
+    "sourceURI": "http://www.openml.org/d/23",
+    "approximateSize": "",
+    "datasetSchemaVersion": "3.2.0",
+    "redacted": false,
+    "datasetVersion": "2.0",
+    "digest": "b9f24f07d1a654be87b85f019cc9748e9d1a20e9f563a55a93790ac753048901"
+  },
+  "dataResources": [
+    {
+      "resID": "learningData",
+      "resPath": "tables/learningData.csv",
+      "resType": "table",
+      "resFormat": [
+        "text/csv"
+      ],
+      "isCollection": false,
+      "columns": [
+        {
+          "colIndex": 0,
+          "colName": "d3mIndex",
+          "colType": "integer",
+          "role": [
+            "index"
+          ]
+        },
+        {
+          "colIndex": 1,
+          "colName": "Wifes_age",
+          "colType": "integer",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 2,
+          "colName": "Wifes_education",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 3,
+          "colName": "Husbands_education",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 4,
+          "colName": "Number_of_children_ever_born",
+          "colType": "integer",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 5,
+          "colName": "Wifes_religion",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 6,
+          "colName": "Wifes_now_working%3F",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 7,
+          "colName": "Husbands_occupation",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 8,
+          "colName": "Standard-of-living_index",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 9,
+          "colName": "Media_exposure",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 10,
+          "colName": "Contraceptive_method_used",
+          "colType": "categorical",
+          "role": [
+            "suggestedTarget"
+          ]
+        }
+      ]
+    }
+  ]
+}

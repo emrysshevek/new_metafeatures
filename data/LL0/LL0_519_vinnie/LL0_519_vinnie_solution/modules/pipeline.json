@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_519_vinnie",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator", 
+    "params": {
+      "alpha": 0.0001, 
+      "epsilon": 0.31622776601683794, 
+      "eta0": 0.1, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.7000000000000001, 
+      "learning_rate": "optimal", 
+      "loss": "squared_loss", 
+      "penalty": "elasticnet", 
+      "power_t": 0.25
+    }
+  }, 
+  "feature_extractors": {
+    "year,field_goal_attempts": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": false, 
+        "categorize": false, 
+        "normalize_text": false, 
+        "numeric_strategy": "median"
+      }, 
+      "uuid": "204a3c60e06611e78d095cb90191be84"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectPercentileRegression", 
+    "params": {
+      "percentile": 92, 
+      "score_func": "f_regression"
+    }
+  }, 
+  "performance": {
+    "cv_performance": 2.441591688033339, 
+    "metric": "meanSquaredError"
+  }
+}

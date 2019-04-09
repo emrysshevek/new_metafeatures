@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_1449_MeanWhile1_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 0.01,
+      "fit_intercept": true,
+      "l1_ratio": 0.6000000000000001,
+      "loss": "log",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,r,s,t,u,v,z,aa,ab,ac,ad,ae,af,ag,ah,ai,aj,ak,al,am,an,ao": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": false,
+        "normalize_text": true,
+        "numeric_strategy": "median"
+      },
+      "uuid": "ad007d84e5db11e7bdbb0002c958a3da"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC",
+    "params": {
+      "C": 55.90810182512222,
+      "threshold": 1e-05
+    }
+  },
+  "performance": {
+    "cv_performance": 0.7526200341213746,
+    "metric": "f1Macro"
+  }
+}

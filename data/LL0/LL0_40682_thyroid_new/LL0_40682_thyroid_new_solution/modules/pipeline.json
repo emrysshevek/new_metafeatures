@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_40682_thyroid_new_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 0.0001,
+      "fit_intercept": true,
+      "l1_ratio": 0.6000000000000001,
+      "loss": "squared_hinge",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "2,3,4,5,6": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": true,
+        "normalize_text": false,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "5a1d76f6e66411e79eb8b4b52f5bf448"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 39,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.9610705823668787,
+    "metric": "f1Macro"
+  }
+}

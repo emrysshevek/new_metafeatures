@@ -1,0 +1,61 @@
+{
+  "about": {
+    "datasetID": "LL0_1435_fourclass_dataset",
+    "datasetName": "fourclass",
+    "description": "**Author**: Tin Kam Ho and Eugene M. Kleinberg.  \n**Source**: [original](http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html) - Date unknown  \n**Please cite**: Tin Kam Ho and Eugene M. Kleinberg.\nBuilding projectable classifiers of arbitrary complexity.\nIn Proceedings of the 13th International Conference on Pattern Recognition, pages 880-885, Vienna, Austria, August 1996.  \n\n#Dataset from the LIBSVM data repository.\n\nPreprocessing: transform to two-class",
+    "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+    "license": "CC-BY license",
+    "source": "OpenML",
+    "sourceURI": "http://www.openml.org/d/1435",
+    "approximateSize": "",
+    "datasetVersion": "2.0",
+    "datasetSchemaVersion": "3.2.0",
+    "redacted": false,
+    "digest": "92ce0319c6b9bc3b2580b033eb0e86acb6db8716f299908eb2a3ec03ddda04be"
+  },
+  "dataResources": [
+    {
+      "resID": "learningData",
+      "resPath": "tables/learningData.csv",
+      "resType": "table",
+      "resFormat": [
+        "text/csv"
+      ],
+      "isCollection": false,
+      "columns": [
+        {
+          "colIndex": 0,
+          "colName": "d3mIndex",
+          "colType": "integer",
+          "role": [
+            "index"
+          ]
+        },
+        {
+          "colIndex": 1,
+          "colName": "att_1",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 2,
+          "colName": "att_2",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 3,
+          "colName": "class",
+          "colType": "real",
+          "role": [
+            "suggestedTarget"
+          ]
+        }
+      ]
+    }
+  ]
+}

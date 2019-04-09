@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_504_analcatdata_supreme_dataset",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator",
+    "params": {
+      "alpha": 0.001,
+      "epsilon": 0.31622776601683794,
+      "eta0": 0.1,
+      "fit_intercept": true,
+      "l1_ratio": 0.1,
+      "learning_rate": "optimal",
+      "loss": "squared_loss",
+      "penalty": "elasticnet",
+      "power_t": 0.0
+    }
+  },
+  "feature_extractors": {
+    "Actions_taken,Liberal,Unconstitutional,Precedent_alteration,Unanimous,Year_of_decision,Lower_court_disagreement": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": false,
+        "categorize": false,
+        "normalize_text": false,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "acf9e866e5db11e78c320002c958a3e6"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectFromLasso",
+    "params": {
+      "alpha": 8.302175681319735e-05,
+      "threshold": 1e-05
+    }
+  },
+  "performance": {
+    "cv_performance": 0.1740390327344046,
+    "metric": "meanSquaredError"
+  }
+}

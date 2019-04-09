@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_21_car",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator", 
+    "params": {
+      "alpha": 1e-06, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.8, 
+      "loss": "hinge", 
+      "penalty": "elasticnet"
+    }
+  }, 
+  "feature_extractors": {
+    "buying,maint,doors,persons,lug_boot,safety": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": true, 
+        "categorize": true, 
+        "normalize_text": true, 
+        "numeric_strategy": "median"
+      }, 
+      "uuid": "1da9f7b2db0b11e7b3e10002c95915de"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification", 
+    "params": {
+      "percentile": 86, 
+      "score_func": "f_classif"
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.7714800767102891, 
+    "metric": "f1Macro"
+  }
+}

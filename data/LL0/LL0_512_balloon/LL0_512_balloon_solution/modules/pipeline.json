@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_512_balloon",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator", 
+    "params": {
+      "alpha": 1e-09, 
+      "epsilon": 0.01, 
+      "eta0": 0.001, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.9, 
+      "learning_rate": "invscaling", 
+      "loss": "squared_loss", 
+      "penalty": "elasticnet", 
+      "power_t": 0.0
+    }
+  }, 
+  "feature_extractors": {
+    "id,raw": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": false, 
+        "categorize": true, 
+        "normalize_text": false, 
+        "numeric_strategy": "median"
+      }, 
+      "uuid": "f56699a6daef11e7815d0002c95915dc"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectFromLasso", 
+    "params": {
+      "alpha": 0.00035938136638046257, 
+      "threshold": 1e-05
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.0014476915284627957, 
+    "metric": "meanSquaredError"
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "about": {
+    "datasetID": "LL0_287_wine_quality_dataset",
+    "datasetName": "LL0_287_wine_quality",
+    "description": "**Author**: Tobias Kuehn  \n**Source**: Unknown - 2009  \n**Please cite**:   \n\n1. Title: Wine Quality \n\n2. Sources\nCreated by: Paulo Cortez (Univ. Minho), Antonio Cerdeira, Fernando Almeida, Telmo Matos and Jose Reis (CVRVV) @ 2009\n    \n3. Past Usage:\nP. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. \nModeling wine preferences by data mining from physicochemical properties.\nIn Decision Support Systems, Elsevier, 47(4):547-553. ISSN: 0167-9236.\n\nIn the above reference, two datasets were created, using red and white wine samples.\nThe inputs include objective tests (e.g. PH values) and the output is based on sensory data (median of at least 3 evaluations made by wine experts). Each expert graded the wine quality between 0 (very bad) and 10 (very excellent). Several data mining methods were applied to model these datasets under a regression approach. The support vector machine model achieved the best results. Several metrics were computed: MAD, confusion matrix for a fixed error tolerance (T), etc. Also, we plot the relative importances of the input variables (as measured by a sensitivity analysis procedure).\n \n4. Relevant Information:\nThe two datasets are related to red and white variants of the Portuguese \"Vinho Verde\" wine. For more details, consult: http://www.vinhoverde.pt/en/ or the reference [Cortez et al., 2009]. Due to privacy and logistic issues, only physicochemical (inputs) and sensory (the output) variables  are available (e.g. there is no data about grape types, wine brand, wine selling price, etc.).\nThese datasets can be viewed as classification or regression tasks.\nThe classes are ordered and not balanced (e.g. there are munch more normal wines than excellent or poor ones). Outlier detection algorithms could be used to detect the few excellent or poor wines. Also, we are not sure if all input variables are relevant. So it could be interesting to test feature selection methods. \n\n5. Number of Instances: red wine - first 1599 instances; white wine - instances 1600 to 6497. \n \n6. Number of Attributes: 11 + output attribute\nNote: several of the attributes may be correlated, thus it makes sense to apply some sort of feature selection.\n\n7. Attribute information:\nFor more information, read [Cortez et al., 2009].\nInput variables (based on physicochemical tests):\n1 - fixed acidity\n2 - volatile acidity\n3 - citric acid\n4 - residual sugar\n5 - chlorides\n6 - free sulfur dioxide\n7 - total sulfur dioxide\n8 - density\n9 - pH\n10 - sulphates\n11 - alcohol\nOutput variable (based on sensory data): \n12 - quality (score between 0 and 10)\n\n8. Missing Attribute Values: None",
+    "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+    "license": "CC-BY license",
+    "source": "OpenML",
+    "sourceURI": "http://www.openml.org/d/287",
+    "approximateSize": "",
+    "datasetSchemaVersion": "3.2.0",
+    "redacted": false,
+    "datasetVersion": "2.0",
+    "digest": "00c9c73196d1de21a039fee4b0ac9bac7cd0c0504944ba0692963fd5ae268df1"
+  },
+  "dataResources": [
+    {
+      "resID": "learningData",
+      "resPath": "tables/learningData.csv",
+      "resType": "table",
+      "resFormat": [
+        "text/csv"
+      ],
+      "isCollection": false,
+      "columns": [
+        {
+          "colIndex": 0,
+          "colName": "d3mIndex",
+          "colType": "integer",
+          "role": [
+            "index"
+          ]
+        },
+        {
+          "colIndex": 1,
+          "colName": "fixed.acidity",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 2,
+          "colName": "volatile.acidity",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 3,
+          "colName": "citric.acid",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 4,
+          "colName": "residual.sugar",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 5,
+          "colName": "chlorides",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 6,
+          "colName": "free.sulfur.dioxide",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 7,
+          "colName": "total.sulfur.dioxide",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 8,
+          "colName": "density",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 9,
+          "colName": "pH",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 10,
+          "colName": "sulphates",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 11,
+          "colName": "alcohol",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 12,
+          "colName": "quality",
+          "colType": "real",
+          "role": [
+            "suggestedTarget"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_536_arsenic_male_lung_dataset",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator",
+    "params": {
+      "alpha": 0.1,
+      "epsilon": 0.31622776601683794,
+      "eta0": 0.01,
+      "fit_intercept": true,
+      "l1_ratio": 0.7000000000000001,
+      "learning_rate": "invscaling",
+      "loss": "huber",
+      "penalty": "elasticnet",
+      "power_t": 0.5
+    }
+  },
+  "feature_extractors": {
+    "group,conc,age,at.risk": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": false,
+        "categorize": false,
+        "normalize_text": false,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "8a8d141ae66711e787280002c95915b0"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectFromLasso",
+    "params": {
+      "alpha": 19.630406500402685,
+      "threshold": 1e-05
+    }
+  },
+  "performance": {
+    "cv_performance": 16.316182649408752,
+    "metric": "meanSquaredError"
+  }
+}

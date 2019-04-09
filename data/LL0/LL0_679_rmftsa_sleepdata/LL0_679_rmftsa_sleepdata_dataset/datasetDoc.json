@@ -1,0 +1,61 @@
+{
+  "about": {
+    "datasetID": "LL0_679_rmftsa_sleepdata_dataset",
+    "datasetName": "LL0_679_rmftsa_sleepdata",
+    "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nData Sets for 'Regression Models for Time Series Analysis' by\nB. Kedem and K. Fokianos, Wiley 2002. Submitted by Kostas\nFokianos (fokianos@ucy.ac.cy) [8/Nov/02] (176k)\n\nNote: - attribute names were generated manually\n- information about data taken from here:\nhttp://lib.stat.cmu.edu/datasets/\n\nFile: ../data/rmftsa/sleepdata.txt\n\nSleep state measurements of a newborn infant (column 2) together\nwith his heart rate (column 1) and temperature (column 3).\n\n\nInformation about the dataset\nCLASSTYPE: numeric\nCLASSINDEX: none specific",
+    "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+    "license": "CC-BY license",
+    "source": "OpenML",
+    "sourceURI": "http://www.openml.org/d/679",
+    "approximateSize": "",
+    "datasetSchemaVersion": "3.2.0",
+    "redacted": false,
+    "datasetVersion": "2.0",
+    "digest": "2b27226d4bd6c47a9504732f454c796e7588dfe9fc42339aec397d775cf6fd0b"
+  },
+  "dataResources": [
+    {
+      "resID": "learningData",
+      "resPath": "tables/learningData.csv",
+      "resType": "table",
+      "resFormat": [
+        "text/csv"
+      ],
+      "isCollection": false,
+      "columns": [
+        {
+          "colIndex": 0,
+          "colName": "d3mIndex",
+          "colType": "integer",
+          "role": [
+            "index"
+          ]
+        },
+        {
+          "colIndex": 1,
+          "colName": "heart_rate",
+          "colType": "integer",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 2,
+          "colName": "sleep_state",
+          "colType": "categorical",
+          "role": [
+            "suggestedTarget"
+          ]
+        },
+        {
+          "colIndex": 3,
+          "colName": "temperature",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        }
+      ]
+    }
+  ]
+}

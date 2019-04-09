@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_191_wisconsin_dataset",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator",
+    "params": {
+      "alpha": 0.01,
+      "epsilon": 0.1,
+      "eta0": 0.001,
+      "fit_intercept": true,
+      "l1_ratio": 0.0,
+      "learning_rate": "invscaling",
+      "loss": "squared_loss",
+      "penalty": "elasticnet",
+      "power_t": 0.0
+    }
+  },
+  "feature_extractors": {
+    "lymph_node_status,radius_mean,radius_se,radius_worst,texture_mean,texture_se,texture_worst,perimeter_mean,perimeter_se,perimeter_worst,area_mean,area_se,area_worst,smoothness_mean,smoothness_se,smoothness_worst,compactness_mean,compactness_se,compactness_worst,concavity_mean,concavity_se,concavity_worst,concave_points_mean,concave_points_se,concave_points_worst,symmetry_mean,symmetry_se,symmetry_worst,fractal_dimension_mean,fractal_dimension_se,fractal_dimension_worst,tumor_size": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": false,
+        "normalize_text": true,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "5727206ee66411e79368b4b52f5bb470"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileRegression",
+    "params": {
+      "percentile": 45,
+      "score_func": "f_regression"
+    }
+  },
+  "performance": {
+    "cv_performance": 985.8831143515118,
+    "metric": "meanSquaredError"
+  }
+}

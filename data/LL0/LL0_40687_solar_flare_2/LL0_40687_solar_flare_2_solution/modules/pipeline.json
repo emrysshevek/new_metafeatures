@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_40687_solar_flare_2_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 0.01,
+      "fit_intercept": true,
+      "l1_ratio": 0.2,
+      "loss": "squared_hinge",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "largest_spot_size,spot_distribution,Activity,Evolution,Previous_24_hour_flare_activity_code,Historically-complex,Did_region_become_historically_complex,Area,Area_of_the_largest_spot,C-class_flares_production_by_this_region,M-class_flares_production_by_this_region,X-class_flares_production_by_this_region": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": false,
+        "categorize": true,
+        "normalize_text": false,
+        "numeric_strategy": "median"
+      },
+      "uuid": "80dafebae5da11e79fedb4b52f5bb470"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 93,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.6398743890140076,
+    "metric": "f1Macro"
+  }
+}

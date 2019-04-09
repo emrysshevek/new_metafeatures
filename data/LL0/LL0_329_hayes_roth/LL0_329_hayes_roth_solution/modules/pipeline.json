@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_329_hayes_roth_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 0.0001,
+      "fit_intercept": true,
+      "l1_ratio": 0.9,
+      "loss": "log",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "hobby,age,educational_level,marital_status": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": true,
+        "normalize_text": false,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "697e9138e66a11e7991d0002c958a2da"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 41,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.8910155648019726,
+    "metric": "f1Macro"
+  }
+}

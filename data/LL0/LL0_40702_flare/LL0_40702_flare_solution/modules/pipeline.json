@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_40702_flare_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 0.001,
+      "fit_intercept": false,
+      "l1_ratio": 0.2,
+      "loss": "perceptron",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "class_code,largest_spot_code,spot_dist_code,Activity,Evolution,Previous_24_hour_code,Historically-complex,become_complex,Area,Area_of_the_largest_spot": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": true,
+        "normalize_text": false,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "2bc20d78e66711e7b9ebac162dbeeb04"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 42,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.6520155550664024,
+    "metric": "f1Macro"
+  }
+}

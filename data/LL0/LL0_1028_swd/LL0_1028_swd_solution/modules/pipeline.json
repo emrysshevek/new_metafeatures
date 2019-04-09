@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_1028_swd",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator", 
+    "params": {
+      "alpha": 1e-09, 
+      "epsilon": 1.0, 
+      "eta0": 0.1, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.0, 
+      "learning_rate": "invscaling", 
+      "loss": "squared_loss", 
+      "penalty": "elasticnet", 
+      "power_t": 0.25
+    }
+  }, 
+  "feature_extractors": {
+    "In1,In2,In3,In4,In5,In6,In7,In8,In9,In10": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": true, 
+        "categorize": true, 
+        "normalize_text": false, 
+        "numeric_strategy": "mean"
+      }, 
+      "uuid": "75c4537ee02a11e7837d5cb90191d490"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectFromLasso", 
+    "params": {
+      "alpha": 2.656087782946684e-05, 
+      "threshold": 1e-05
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.37531011473547754, 
+    "metric": "meanSquaredError"
+  }
+}

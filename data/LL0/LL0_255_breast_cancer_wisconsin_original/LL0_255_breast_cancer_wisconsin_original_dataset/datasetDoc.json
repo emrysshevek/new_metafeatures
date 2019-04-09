@@ -1,0 +1,124 @@
+{
+  "about": {
+    "datasetID": "LL0_255_breast_cancer_wisconsin_original_dataset",
+    "datasetName": "breast_cancer_wisconsin_original",
+    "description": "Dataset to diagnose breast cancer from a set of pre-extracted features.",
+    "citation": "\n            @misc{Lichman:2013 ,\n            author = \"M. Lichman\",\n            year = \"2013\",\n            title = \"{UCI} Machine Learning Repository\",\n            url = \"http://archive.ics.uci.edu/ml\",\n            institution = \"University of California, Irvine, School of Information and Computer Sciences\" }",
+    "license": "Unknown public",
+    "source": "UCI",
+    "sourceURI": "https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Original%29",
+    "datasetSchemaVersion": "3.2.0",
+    "redacted": false,
+    "datasetVersion": "2.0",
+    "digest": "11a111a9d47035193d40a45a9e970c16d8a1773f8ed387f7c20e7be7b4782471"
+  },
+  "dataResources": [
+    {
+      "resID": "learningData",
+      "resPath": "tables/learningData.csv",
+      "resType": "table",
+      "resFormat": [
+        "text/csv"
+      ],
+      "isCollection": false,
+      "columns": [
+        {
+          "colIndex": 0,
+          "colName": "d3mIndex",
+          "colType": "integer",
+          "role": [
+            "index"
+          ]
+        },
+        {
+          "colIndex": 1,
+          "colName": "sample_code_number",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 2,
+          "colName": "clump_thickness",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 3,
+          "colName": "uniformity_of_cell_size",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 4,
+          "colName": "uniformity_of_cell_shape",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 5,
+          "colName": "marginal_adhesion",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 6,
+          "colName": "single_epithelial_cell_size",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 7,
+          "colName": "bare_nuclei",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 8,
+          "colName": "bland_chromatin",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 9,
+          "colName": "normal_nucleoli",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 10,
+          "colName": "mitoses",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 11,
+          "colName": "class_target",
+          "colType": "categorical",
+          "role": [
+            "suggestedTarget"
+          ]
+        }
+      ]
+    }
+  ]
+}

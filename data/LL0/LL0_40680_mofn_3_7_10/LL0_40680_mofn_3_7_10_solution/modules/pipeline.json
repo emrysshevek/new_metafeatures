@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_40680_mofn_3_7_10_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 0.001,
+      "fit_intercept": true,
+      "l1_ratio": 0.1,
+      "loss": "log",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "Bit-0,Bit-1,Bit-2,Bit-3,Bit-4,Bit-5,Bit-6,Bit-7,Bit-8,Bit-9": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": false,
+        "categorize": false,
+        "normalize_text": true,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "8a7be050e66711e7b2c90002c958a452"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 95,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 1.0,
+    "metric": "f1Macro"
+  }
+}

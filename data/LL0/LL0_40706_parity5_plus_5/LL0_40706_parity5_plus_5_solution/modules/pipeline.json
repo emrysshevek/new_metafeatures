@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_40706_parity5_plus_5_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 1e-06,
+      "fit_intercept": false,
+      "l1_ratio": 0.2,
+      "loss": "perceptron",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "Bit_1,Bit_2,Bit_3,Bit_4,Bit_5,Bit_6,Bit_7,Bit_8,Bit_9,Bit_10": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": false,
+        "categorize": false,
+        "normalize_text": false,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "80dde7f6e5da11e7b3a6b4b52f5bb470"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC",
+    "params": {
+      "C": 0.013848863713938732,
+      "threshold": 1e-05
+    }
+  },
+  "performance": {
+    "cv_performance": 0.522261894627199,
+    "metric": "f1Macro"
+  }
+}

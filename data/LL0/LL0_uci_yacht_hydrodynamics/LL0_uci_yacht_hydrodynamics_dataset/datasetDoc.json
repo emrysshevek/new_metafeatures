@@ -1,0 +1,92 @@
+{
+  "about": {
+    "datasetID": "LL0_uci_yacht_hydrodynamics_dataset",
+    "datasetName": "yacht_hydrodynamics",
+    "description": "Dataset to predict the hydrodynamic performance of sailing yachts from dimensions and velocity.",
+    "citation": "\n            @misc{Lichman:2013 ,\n            author = \"M. Lichman\",\n            year = \"2013\",\n            title = \"{UCI} Machine Learning Repository\",\n            url = \"http://archive.ics.uci.edu/ml\",\n            institution = \"University of California, Irvine, School of Information and Computer Sciences\" }",
+    "license": "Unknown public",
+    "source": "UCI",
+    "sourceURI": "https://archive.ics.uci.edu/ml/datasets/Yacht+Hydrodynamics",
+    "datasetSchemaVersion": "3.2.0",
+    "redacted": false,
+    "datasetVersion": "2.0",
+    "digest": "f10c15944f7ce93a1c03645be97b7c71caa41a64017c789c127acb587c8e9db9"
+  },
+  "dataResources": [
+    {
+      "resID": "learningData",
+      "resPath": "tables/learningData.csv",
+      "resType": "table",
+      "resFormat": [
+        "text/csv"
+      ],
+      "isCollection": false,
+      "columns": [
+        {
+          "colIndex": 0,
+          "colName": "d3mIndex",
+          "colType": "integer",
+          "role": [
+            "index"
+          ]
+        },
+        {
+          "colIndex": 1,
+          "colName": "longitudinal_position_of_center_of_buoyancy",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 2,
+          "colName": "prismatic_coefficient",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 3,
+          "colName": "length_displacement_ratio",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 4,
+          "colName": "beam_draught_ratio",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 5,
+          "colName": "length_beam_ratio",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 6,
+          "colName": "froude_number",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 7,
+          "colName": "output_target",
+          "colType": "real",
+          "role": [
+            "suggestedTarget"
+          ]
+        }
+      ]
+    }
+  ]
+}

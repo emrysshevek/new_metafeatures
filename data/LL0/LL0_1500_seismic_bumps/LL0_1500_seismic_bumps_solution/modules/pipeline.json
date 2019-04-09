@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_1500_seismic_bumps_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 0.0001,
+      "fit_intercept": true,
+      "l1_ratio": 0.30000000000000004,
+      "loss": "hinge",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "V1,V2,V3,V4,V5,V6,V7": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": false,
+        "categorize": true,
+        "normalize_text": false,
+        "numeric_strategy": "median"
+      },
+      "uuid": "80d3b39ee5da11e780140002c95916b4"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 70,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.9762332831975001,
+    "metric": "f1Macro"
+  }
+}

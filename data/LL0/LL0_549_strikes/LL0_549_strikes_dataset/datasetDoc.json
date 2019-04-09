@@ -1,0 +1,93 @@
+{
+  "about": {
+    "datasetID": "LL0_549_strikes_dataset",
+    "datasetName": "LL0_549_strikes",
+    "description": "**Author**: Bruce Western (western@datacomm.iue.it)   \n**Source**: [StatLib](http://lib.stat.cmu.edu/datasets/) - 1999  \n**Please cite**:   \n\nThe data consist of annual observations on the level of strike volume (days lost due to industrial disputes per 1000 wage salary earners), and their covariates in 18 OECD countries from 1951-1985. The average level and variance of strike volume varies across countries. The data distribution also features a long right tail and several large outliers. \n\nThe 7 data fields include the following variables:  \n>\n(1) country code;  \n(2) year;  \n(3) strike volume;  \n(4) unemployment;  \n(5) inflation;  \n(6) parliamentary representation of social democratic and labor parties  \n(7) a time-invariant measure of union centralization.\n\nThese data were analyzed in the forthcoming paper by Bruce Western, \"Vague Theory and Model Uncertainty in Macrosociology,\" which is to appear in Sociological Methodology. Permission is given by the author to freely use and redistribute these data.",
+    "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+    "license": "CC-BY license",
+    "source": "OpenML",
+    "sourceURI": "http://www.openml.org/d/549",
+    "approximateSize": "",
+    "datasetSchemaVersion": "3.2.0",
+    "redacted": false,
+    "datasetVersion": "2.0",
+    "digest": "4cab1a18df56d82da179328c98e437a19e2a651105ad787cd8c1f5de0a7ae6cf"
+  },
+  "dataResources": [
+    {
+      "resID": "learningData",
+      "resPath": "tables/learningData.csv",
+      "resType": "table",
+      "resFormat": [
+        "text/csv"
+      ],
+      "isCollection": false,
+      "columns": [
+        {
+          "colIndex": 0,
+          "colName": "d3mIndex",
+          "colType": "integer",
+          "role": [
+            "index"
+          ]
+        },
+        {
+          "colIndex": 1,
+          "colName": "country_code",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 2,
+          "colName": "year",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 3,
+          "colName": "strike_volume",
+          "colType": "real",
+          "role": [
+            "suggestedTarget"
+          ]
+        },
+        {
+          "colIndex": 4,
+          "colName": "unemployment",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 5,
+          "colName": "inflation",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 6,
+          "colName": "parliamentary_representation",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 7,
+          "colName": "union_centralization",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "about": {
+    "datasetID": "LL0_666_rmftsa_ladata_dataset",
+    "datasetName": "LL0_666_rmftsa_ladata",
+    "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nData Sets for 'Regression Models for Time Series Analysis' by\nB. Kedem and K. Fokianos, Wiley 2002. Submitted by Kostas\nFokianos (fokianos@ucy.ac.cy) [8/Nov/02] (176k)\n\nNote: - attribute names were generated manually\n- information about data taken from here:\nhttp://lib.stat.cmu.edu/datasets/\n\nFile: ../data/rmftsa/ladata\n\nLA Pollution-Mortality Study:\n1970-1979, 508 observations,  6-day spacing. Weekly FILTERED data.\nThe data were lowpass filtered, filtering out frequencies above 0.1\ncycles per day.\nMortality:          (1) Mrt: Total Mortality\n(2) Rsp: Respiratory Mortality\n(3) Crd: Cardiovascular Mortality\nWeather:            (4) Tmp: Temperature\n(5) Hum: Relative Humidity\nPollution:          (6) Crb: Carbon Monoxide\n(7) Slf: Sulfur Dioxideglm.LAshumway\n(8) Nit: Nitrogen Dioxide\n(9) Hdr: Hydrocarbons\n(10) Ozn: Ozone\n(11) Par: Particulates\n\n\nInformation about the dataset\nCLASSTYPE: numeric\nCLASSINDEX: none specific",
+    "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+    "license": "CC-BY license",
+    "source": "OpenML",
+    "sourceURI": "http://www.openml.org/d/666",
+    "approximateSize": "",
+    "datasetSchemaVersion": "3.2.0",
+    "redacted": false,
+    "datasetVersion": "2.0",
+    "digest": "1a98e92e8a9da89a308ff0d39ca4ac44e81d06e93ae7cee5d99495782878253d"
+  },
+  "dataResources": [
+    {
+      "resID": "learningData",
+      "resPath": "tables/learningData.csv",
+      "resType": "table",
+      "resFormat": [
+        "text/csv"
+      ],
+      "isCollection": false,
+      "columns": [
+        {
+          "colIndex": 0,
+          "colName": "d3mIndex",
+          "colType": "integer",
+          "role": [
+            "index"
+          ]
+        },
+        {
+          "colIndex": 1,
+          "colName": "Total_Mortality",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 2,
+          "colName": "Respiratory_Mortality",
+          "colType": "real",
+          "role": [
+            "suggestedTarget"
+          ]
+        },
+        {
+          "colIndex": 3,
+          "colName": "Cardiovascular_Mortality",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 4,
+          "colName": "Temperature",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 5,
+          "colName": "Relative_Humidity",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 6,
+          "colName": "Carbon_Monoxide",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 7,
+          "colName": "Sulfur_Dioxideglm.LAshumway",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 8,
+          "colName": "Nitrogen_Dioxide",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 9,
+          "colName": "Hydrocarbons",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 10,
+          "colName": "Ozone",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 11,
+          "colName": "Particulates",
+          "colType": "real",
+          "role": [
+            "attribute"
+          ]
+        }
+      ]
+    }
+  ]
+}

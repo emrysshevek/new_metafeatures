@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_454_analcatdata_halloffame_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 1e-06,
+      "fit_intercept": true,
+      "l1_ratio": 0.0,
+      "loss": "squared_hinge",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "Player,Number_seasons,Games_played,At_bats,Runs,Hits,Doubles,Triples,Home_runs,RBIs,Walks,Strikeouts,Batting_average,On_base_pct,Slugging_pct,Fielding_ave,Position": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": false,
+        "normalize_text": false,
+        "numeric_strategy": "median"
+      },
+      "uuid": "5a1d359ce66411e7b8ee0002c958a326"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 98,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.7177972619596985,
+    "metric": "f1Macro"
+  }
+}

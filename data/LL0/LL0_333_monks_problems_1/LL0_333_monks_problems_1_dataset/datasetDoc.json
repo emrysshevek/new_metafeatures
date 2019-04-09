@@ -1,0 +1,93 @@
+{
+  "about": {
+    "datasetID": "LL0_333_monks_problems_1_dataset",
+    "datasetName": "LL0_333_monks_problems_1",
+    "description": "**Author**: Sebastian Thrun (Carnegie Mellon University)  \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/MONK's+Problems) - October 1992  \n**Please cite**: [UCI](https://archive.ics.uci.edu/ml/citation_policy.html)   \n\n**The Monk's Problems: Problem 1**  \nOnce upon a time, in July 1991, the monks of Corsendonk Priory were faced with a school held in their priory, namely the 2nd European Summer School on Machine Learning. After listening more than one week to a wide variety of learning algorithms, they felt rather confused: Which algorithm would be optimal? And which one to avoid? As a consequence of this dilemma, they created a simple task on which all learning algorithms ought to be compared: the three MONK's problems.\n\nThe target concept associated with the 1st Monk's problem is the binary outcome of the logical formula:  \nMONK-1: (a1 == a2) or (a5 == 1)\n\nIn this dataset, the original train and test sets were merged to allow other sampling procedures. However, the original train-test splits can be found as one of the OpenML tasks. \n\n### Attribute information: \n* attr1: 1, 2, 3 \n* attr2: 1, 2, 3 \n* attr3: 1, 2 \n* attr4: 1, 2, 3 \n* attr5: 1, 2, 3, 4 \n* attr6: 1, 2 \n\n### Relevant papers  \nThe MONK's Problems - A Performance Comparison of Different Learning Algorithms, by S.B. Thrun, J. Bala, E. Bloedorn, I. Bratko, B. Cestnik, J. Cheng, K. De Jong, S. Dzeroski, S.E. Fahlman, D. Fisher, R. Hamann, K. Kaufman, S. Keller, I. Kononenko, J. Kreuziger, R.S. Michalski, T. Mitchell, P. Pachowicz, Y. Reich H. Vafaie, W. Van de Welde, W. Wenzel, J. Wnek, and J. Zhang. Technical Report CS-CMU-91-197, Carnegie Mellon University, Dec. 1991.",
+    "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+    "license": "CC-BY license",
+    "source": "OpenML",
+    "sourceURI": "http://www.openml.org/d/333",
+    "approximateSize": "",
+    "datasetSchemaVersion": "3.2.0",
+    "redacted": false,
+    "datasetVersion": "2.0",
+    "digest": "364bb5e69839c090d5f5d76a5e76275adeedbb729855f1913c8b855c7abc75cd"
+  },
+  "dataResources": [
+    {
+      "resID": "learningData",
+      "resPath": "tables/learningData.csv",
+      "resType": "table",
+      "resFormat": [
+        "text/csv"
+      ],
+      "isCollection": false,
+      "columns": [
+        {
+          "colIndex": 0,
+          "colName": "d3mIndex",
+          "colType": "integer",
+          "role": [
+            "index"
+          ]
+        },
+        {
+          "colIndex": 1,
+          "colName": "class",
+          "colType": "categorical",
+          "role": [
+            "suggestedTarget"
+          ]
+        },
+        {
+          "colIndex": 2,
+          "colName": "attr1",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 3,
+          "colName": "attr2",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 4,
+          "colName": "attr3",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 5,
+          "colName": "attr4",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 6,
+          "colName": "attr5",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        },
+        {
+          "colIndex": 7,
+          "colName": "attr6",
+          "colType": "categorical",
+          "role": [
+            "attribute"
+          ]
+        }
+      ]
+    }
+  ]
+}

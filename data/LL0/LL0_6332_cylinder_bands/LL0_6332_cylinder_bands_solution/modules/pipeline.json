@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_6332_cylinder_bands_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 1e-09,
+      "fit_intercept": true,
+      "l1_ratio": 1.0,
+      "loss": "hinge",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "timestamp,cylinder_number,customer,job_number,grain_screened,ink_color,proof_on_ctd_ink,blade_mfg,cylinder_division,paper_type,ink_type,direct_steam,solvent_type,type_on_cylinder,press_type,press,unit_number,cylinder_size,paper_mill_location,plating_tank,proof_cut,viscosity,caliper,ink_temperature,humifity,roughness,blade_pressure,varnish_pct,press_speed,ink_pct,solvent_pct,ESA_Voltage,ESA_Amperage,wax,hardener,roller_durometer,current_density,anode_space_ratio,chrome_content": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": false,
+        "normalize_text": false,
+        "numeric_strategy": "median"
+      },
+      "uuid": "5a0a2812e66411e7bb3e0002c958a326"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileClassification",
+    "params": {
+      "percentile": 75,
+      "score_func": "f_classif"
+    }
+  },
+  "performance": {
+    "cv_performance": 0.8209806785921006,
+    "metric": "f1Macro"
+  }
+}

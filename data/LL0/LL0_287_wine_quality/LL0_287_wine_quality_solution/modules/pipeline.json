@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_287_wine_quality",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator", 
+    "params": {
+      "alpha": 0.001, 
+      "epsilon": 1.0, 
+      "eta0": 0.1, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.8, 
+      "learning_rate": "optimal", 
+      "loss": "huber", 
+      "penalty": "elasticnet", 
+      "power_t": 0.75
+    }
+  }, 
+  "feature_extractors": {
+    "fixed.acidity,volatile.acidity,citric.acid,residual.sugar,chlorides,free.sulfur.dioxide,total.sulfur.dioxide,density,pH,sulphates,alcohol": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": true, 
+        "categorize": false, 
+        "normalize_text": true, 
+        "numeric_strategy": "mean"
+      }, 
+      "uuid": "d2c2a73ae05f11e79fa65cb90191d3b4"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectPercentileRegression", 
+    "params": {
+      "percentile": 67, 
+      "score_func": "f_regression"
+    }
+  }, 
+  "performance": {
+    "cv_performance": 0.5420622470184676, 
+    "metric": "meanSquaredError"
+  }
+}

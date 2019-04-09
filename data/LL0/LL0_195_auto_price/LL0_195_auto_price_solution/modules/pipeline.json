@@ -1,0 +1,40 @@
+{
+  "dataset_dir": "../../LL0_195_auto_price_dataset",
+  "estimator": {
+    "estimator": "SGDRegressorEstimator",
+    "params": {
+      "alpha": 1e-07,
+      "epsilon": 0.31622776601683794,
+      "eta0": 0.001,
+      "fit_intercept": true,
+      "l1_ratio": 0.7000000000000001,
+      "learning_rate": "optimal",
+      "loss": "huber",
+      "penalty": "elasticnet",
+      "power_t": 0.75
+    }
+  },
+  "feature_extractors": {
+    "symboling,normalized-losses,wheel-base,length,width,height,curb-weight,engine-size,bore,stroke,compression-ratio,horsepower,peak-rpm,city-mpg,highway-mpg": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": true,
+        "normalize_text": false,
+        "numeric_strategy": "median"
+      },
+      "uuid": "5a1df158e66411e7a2890002c958a252"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectPercentileRegression",
+    "params": {
+      "percentile": 50,
+      "score_func": "f_regression"
+    }
+  },
+  "performance": {
+    "cv_performance": 4748249.239116212,
+    "metric": "meanSquaredError"
+  }
+}

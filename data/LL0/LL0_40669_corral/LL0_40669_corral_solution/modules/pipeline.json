@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_40669_corral_dataset",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator",
+    "params": {
+      "alpha": 1e-06,
+      "fit_intercept": true,
+      "l1_ratio": 0.0,
+      "loss": "hinge",
+      "penalty": "elasticnet"
+    }
+  },
+  "feature_extractors": {
+    "A0,A1,B0,B1,Irrelevant,Correlated": {
+      "feature_extractor": "AnnotatedTabularExtractor",
+      "params": {
+        "add_missing_indicator": true,
+        "categorize": true,
+        "normalize_text": true,
+        "numeric_strategy": "mean"
+      },
+      "uuid": "5a1ac1b8e66411e7bad90002c958a252"
+    }
+  },
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC",
+    "params": {
+      "C": 1.1233240329780276,
+      "threshold": 1e-05
+    }
+  },
+  "performance": {
+    "cv_performance": 0.9203703703703703,
+    "metric": "f1Macro"
+  }
+}

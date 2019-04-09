@@ -1,0 +1,36 @@
+{
+  "dataset_dir": "../../LL0_1505_tamilnadu_electricity",
+  "estimator": {
+    "estimator": "SGDClassifierEstimator", 
+    "params": {
+      "alpha": 0.01, 
+      "fit_intercept": true, 
+      "l1_ratio": 0.7000000000000001, 
+      "loss": "hinge", 
+      "penalty": "elasticnet"
+    }
+  }, 
+  "feature_extractors": {
+    "V1,V2,V3": {
+      "feature_extractor": "AnnotatedTabularExtractor", 
+      "params": {
+        "add_missing_indicator": true, 
+        "categorize": true, 
+        "normalize_text": true, 
+        "numeric_strategy": "mean"
+      }, 
+      "uuid": "94b6eca6e08411e797915cb901924d2c"
+    }
+  }, 
+  "feature_selector": {
+    "feature_selector": "SelectFromLinearSVC", 
+    "params": {
+      "C": 890.2150854450374, 
+      "threshold": 1e-05
+    }
+  }, 
+  "performance": {
+    "cv_performance": 1.0, 
+    "metric": "f1Macro"
+  }
+}
