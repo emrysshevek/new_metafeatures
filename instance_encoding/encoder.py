@@ -21,26 +21,26 @@ class Encoder:
     def encode(self, generator):
         encoder = nn.ModuleList([
             nn.Linear(self.input_dim, self.embed_dim),
-            nn.ReLU(),
+            # nn.ReLU(),
             nn.Linear(self.embed_dim, self.output_dim),
-            nn.ReLU()
+            # nn.ReLU()
         ])
 
         self._train_encoder(nn.Sequential(*encoder), generator)
-
-        return encoder[0]
+        encoding = torch.zeros(len(generator.dataset), self.embed_dim, requires_grad=False)
+        for i, (x, _) in enumerate(generator):
+            encoding[i] = encoder[0](x)
+        return encoding.mean(dim=0).detach()
 
     def _train_encoder(self, encoder, generator):
         opt = optim.Adam(encoder.parameters(), lr=self.lr)
         for i in range(self.n_epochs):
-            print(f"Epoch {i}")
             self._run_epoch(encoder, generator, opt)
 
     def _run_epoch(self, encoder, generator, opt):
         for x, y in generator:
             pred = encoder(x)
             loss = self.loss(pred, y)
-            print(loss)
             loss.backward()
             opt.zero_grad()
             opt.step()
