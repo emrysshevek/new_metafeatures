@@ -3,4 +3,5 @@ Experimenting with different ways of calculating metafeatures and embedding data
 
 # Future Directions
 - Double attention
-- Generative
+- Generative Model
+- Double Feature Reduction
