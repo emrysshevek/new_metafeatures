@@ -5,3 +5,4 @@ Experimenting with different ways of calculating metafeatures and embedding data
 - Double attention
 - Generative Model
 - Double Feature Reduction
+- Skip Thought Style Embedding
